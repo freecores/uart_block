@@ -52,11 +52,11 @@ begin
 					-- Real Beginning of start bit detected 
 					if serial_in = '0' then
 						filterRx <= s2;
-						syncDetected <= '0';
+						syncDetected <= '1';
 					else
 						-- Start bit end detected
-						filterRx <= s2;
-						syncDetected <= '1';
+						--filterRx <= s2;
+						--syncDetected <= '1';
 					end if; 
 			end case;
 		end if;
