@@ -1,0 +1,21 @@
+Running: e:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o E:/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.exe -prj E:/uart_block/hdl/iseProject/testSerial_receiver_beh.prj work.testSerial_receiver 
+ISim O.87xd (signature 0xc3576ebc)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/uart_block/hdl/iseProject/pkgDefinitions.vhd" into library work
+Parsing VHDL file "E:/uart_block/hdl/iseProject/serial_receiver.vhd" into library work
+Parsing VHDL file "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package pkgdefinitions
+Compiling architecture behavioral of entity serial_receiver [serial_receiver_default]
+Compiling architecture behavior of entity testserial_receiver
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable E:/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.exe
+Fuse Memory Usage: 29424 KB
+Fuse CPU Usage: 265 ms

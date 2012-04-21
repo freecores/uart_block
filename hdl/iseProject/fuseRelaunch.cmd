@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "E:/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.exe" -prj "E:/uart_block/hdl/iseProject/testSerial_receiver_beh.prj" "work.testSerial_receiver" 

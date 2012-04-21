@@ -1,0 +1,19 @@
+V3 9
+FL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd 2012/04/21.12:02:35 O.87xd
+PH work/pkgDefinitions 1335003186 \
+      FL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd PB ieee/std_logic_1164 1325952872
+PB work/pkgDefinitions 1335003187 \
+      FL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd PH work/pkgDefinitions 1335003186
+FL E:/uart_block/hdl/iseProject/serial_receiver.vhd 2012/04/21.12:13:03 O.87xd
+EN work/serial_receiver 1335003188 \
+      FL E:/uart_block/hdl/iseProject/serial_receiver.vhd PB ieee/std_logic_1164 1325952872 \
+      PB work/pkgDefinitions 1335003187
+AR work/serial_receiver/Behavioral 1335003189 \
+      FL E:/uart_block/hdl/iseProject/serial_receiver.vhd EN work/serial_receiver 1335003188
+FL E:/uart_block/hdl/iseProject/serial_transmitter.vhd 2012/04/21.09:27:16 O.87xd
+EN work/serial_transmitter 1335001307 \
+      FL E:/uart_block/hdl/iseProject/serial_transmitter.vhd \
+      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335003187
+AR work/serial_transmitter/Behavioral 1335001308 \
+      FL E:/uart_block/hdl/iseProject/serial_transmitter.vhd \
+      EN work/serial_transmitter 1335001307

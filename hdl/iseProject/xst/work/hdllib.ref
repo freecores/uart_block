@@ -1,0 +1,6 @@
+PB pkgdefinitions pkgdefinitions E:/uart_block/hdl/iseProject/pkgDefinitions.vhd sub00/vhpl01 1335003187
+EN serial_receiver NULL E:/uart_block/hdl/iseProject/serial_receiver.vhd sub00/vhpl04 1335003188
+AR serial_transmitter behavioral E:/uart_block/hdl/iseProject/serial_transmitter.vhd sub00/vhpl03 1335001308
+EN serial_transmitter NULL E:/uart_block/hdl/iseProject/serial_transmitter.vhd sub00/vhpl02 1335001307
+PH pkgdefinitions NULL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd sub00/vhpl00 1335003186
+AR serial_receiver behavioral E:/uart_block/hdl/iseProject/serial_receiver.vhd sub00/vhpl05 1335003189
