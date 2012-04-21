@@ -23,7 +23,7 @@ signal syncDetected : std_logic;
 
 begin
 	-- First we need to oversample(8x baud rate) out serial channel to syncronize with the PC
-	process (rst, baudOverSampleClk, serial_in)
+	process (rst, baudOverSampleClk, serial_in, current_s)
 	begin
 		if rst = '1' then
 			filterRx <= s0;			
@@ -48,16 +48,26 @@ begin
 						filterRx <= s0;
 					end if;
 				
-				when s2 =>					
+				when s2 =>
+					syncDetected <= '0';
+					if serial_in = '0' then
+						filterRx <= s3;
+						syncDetected <= '0';
+					else
+						filterRx <= s0;
+					end if;
+				
+				when s3 =>					
 					-- Real Beginning of start bit detected 
 					if serial_in = '0' then
-						filterRx <= s2;
-						syncDetected <= '1';
-					else
-						-- Start bit end detected
-						--filterRx <= s2;
-						--syncDetected <= '1';
+						filterRx <= s3;
+						syncDetected <= '1';					
 					end if; 
+					
+					-- Reset out sync detector when finished to receive a byte
+					if current_s = rx_stop then
+						filterRx <= s0;						
+					end if;
 			end case;
 		end if;
 	end process;
@@ -74,58 +84,60 @@ begin
 	
 	-- Process to handle the serial receive
 	process (current_s) 
+	variable byteReceived : STD_LOGIC_VECTOR ((nBits-1) downto 0);
 	begin
 		case current_s is
 			when rx_idle =>
 				data_ready <= '0';
-				--data_byte <= (others => 'Z');
+				byteReceived := (others => 'Z');
 				next_s <=  bit0;
 			
 			when bit0 =>
 				data_ready <= '0';
-				data_byte(0) <= serial_in;
+				byteReceived(0) := serial_in;
 				next_s <=  bit1;
 			
 			when bit1 =>
 				data_ready <= '0';
-				data_byte(1) <= serial_in;
+				byteReceived(1) := serial_in;
 				next_s <=  bit2;
 			
 			when bit2 =>
 				data_ready <= '0';
-				data_byte(2) <= serial_in;
+				byteReceived(2) := serial_in;
 				next_s <=  bit3;
 			
 			when bit3 =>
 				data_ready <= '0';
-				data_byte(3) <= serial_in;
+				byteReceived(3) := serial_in;
 				next_s <=  bit4;
 			
 			when bit4 =>
 				data_ready <= '0';
-				data_byte(4) <= serial_in;
+				byteReceived(4) := serial_in;
 				next_s <=  bit5;
 			
 			when bit5 =>
 				data_ready <= '0';
-				data_byte(5) <= serial_in;
+				byteReceived(5) := serial_in;
 				next_s <=  bit6;
 			
 			when bit6 =>
 				data_ready <= '0';
-				data_byte(6) <= serial_in;
+				byteReceived(6) := serial_in;
 				next_s <=  bit7;
 				
 			when bit7 =>
 				data_ready <= '0';
-				data_byte(7) <= serial_in;
+				byteReceived(7) := serial_in;
 				next_s <=  rx_stop;
 			
 			when rx_stop =>
-				data_ready <= '1';
-				next_s <=  rx_idle;
+				data_ready <= '1';				
+				data_byte <= byteReceived;
+				next_s <=  rx_stop;			
+		end case; 
 			
-		end case;
 	end process;
 
 end Behavioral;

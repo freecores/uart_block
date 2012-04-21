@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat Apr 21 12:13:05 2012">
+<application name="pn" timeStamp="Sat Apr 21 14:22:36 2012">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="225093D1BA50465FB2D0D99DBD16A3DC" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
@@ -19,7 +19,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/testSerial_transmitter" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/testSerial_receiver" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -29,17 +29,18 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_intWbtProjectID" value="225093D1BA50465FB2D0D99DBD16A3DC" type="design"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.testSerial_transmitter" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.testSerial_receiver" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
 <property name="PROP_DevFamily" value="Spartan3E" type="design"/>
 <property name="PROP_DevDevice" value="xc3s500e" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan3e" type="design"/>
+<property name="PROP_ISimSimulationRunTime_behav_tb" value="1000 us" type="process"/>
 <property name="PROP_DevPackage" value="fg320" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-4" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
-<property name="FILE_VHDL" value="4" type="source"/>
+<property name="FILE_VHDL" value="5" type="source"/>
 </section>
 </application>
 </document>

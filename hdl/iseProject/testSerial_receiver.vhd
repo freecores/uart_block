@@ -101,7 +101,7 @@ BEGIN
 		
 		-- Stop bit here
 		serial_in <= '1';
-		wait for baudClk_period * 3;
+		wait for baudClk_period * 1;
 		
 		-- Receive 0x55 value (01010101)
 		-- Start bit here
@@ -127,7 +127,7 @@ BEGIN
 		
 		-- Stop bit here
 		serial_in <= '1';
-		wait for baudClk_period * 3;
+		wait for baudClk_period * 1;
 
       -- Stop Simulation
 		assert false report "NONE. End of simulation." severity failure;

@@ -8,6 +8,7 @@
 --! Calculate baudrate based on clock speed \n\n
 --! Interesting links \n
 --! http://opencores.org/ \n
+--! http://www.erg.abdn.ac.uk/~gorry/course/phy-pages/async.html \n
 
 --! Use standard library
 
@@ -21,7 +22,7 @@ constant nBits		: integer := 8;
 
 type txStates is (tx_idle, tx_start, bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7, tx_stop1, tx_stop2);
 type rxStates is (rx_idle, bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7, rx_stop);
-type rxFilterStates is (s0, s1, s2);
+type rxFilterStates is (s0, s1, s2, s3);
 
 end pkgDefinitions;
 
