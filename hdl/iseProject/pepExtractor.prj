@@ -1,2 +1,2 @@
+work	"baud_generator.vhd"
 work	"pkgDefinitions.vhd"
-work	"serial_receiver.vhd"

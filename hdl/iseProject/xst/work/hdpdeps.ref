@@ -1,19 +1,30 @@
-V3 9
+V3 13
+FL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd 2012/04/27.15:05:22 O.87xd
+EN work/baud_generator 1335531934 \
+      FL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/STD_LOGIC_UNSIGNED 1325952875 \
+      PB ieee/std_logic_arith 1325952873 PB work/pkgDefinitions 1335531933
+AR work/baud_generator/Behavioral 1335531935 \
+      FL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd \
+      EN work/baud_generator 1335531934
+FL /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd 2012/04/23.13:47:40 O.87xd
+PH work/pkgDefinitions 1335531932 \
+      FL /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd \
+      PB ieee/std_logic_1164 1325952872
+PB work/pkgDefinitions 1335531933 \
+      FL /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd \
+      PH work/pkgDefinitions 1335531932
 FL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd 2012/04/21.14:17:54 O.87xd
-PH work/pkgDefinitions 1335010957 \
-      FL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd PB ieee/std_logic_1164 1325952872
-PB work/pkgDefinitions 1335010958 \
-      FL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd PH work/pkgDefinitions 1335010957
 FL E:/uart_block/hdl/iseProject/serial_receiver.vhd 2012/04/21.14:22:33 O.87xd
 EN work/serial_receiver 1335010959 \
       FL E:/uart_block/hdl/iseProject/serial_receiver.vhd PB ieee/std_logic_1164 1325952872 \
-      PB work/pkgDefinitions 1335010958
+      PB work/pkgDefinitions 1335531933
 AR work/serial_receiver/Behavioral 1335010960 \
       FL E:/uart_block/hdl/iseProject/serial_receiver.vhd EN work/serial_receiver 1335010959
 FL E:/uart_block/hdl/iseProject/serial_transmitter.vhd 2012/04/21.09:27:16 O.87xd
 EN work/serial_transmitter 1335001307 \
       FL E:/uart_block/hdl/iseProject/serial_transmitter.vhd \
-      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335010958
+      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335531933
 AR work/serial_transmitter/Behavioral 1335001308 \
       FL E:/uart_block/hdl/iseProject/serial_transmitter.vhd \
       EN work/serial_transmitter 1335001307

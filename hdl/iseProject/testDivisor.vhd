@@ -99,12 +99,22 @@ BEGIN
 		divident <= conv_std_logic_vector(115200, 32);
       wait for 20 ns;	
 		rst <= '0';
-
-      wait for clk_period*32;
+		
+		wait until done = '1';
+      wait for clk_period;
+		
+		rst <= '1';
+		numerator <= conv_std_logic_vector(40, 32);
+		divident <= conv_std_logic_vector(5, 32);
+      wait for 20 ns;	
+		rst <= '0';
+		
+		wait until done = '1';
+		wait for clk_period;
 
       -- insert stimulus here 
-
-      wait;
+		assert false report "NONE. End of simulation." severity failure;
+      
    end process;
 
 END;

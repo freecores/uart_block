@@ -1,6 +1,8 @@
-PB pkgdefinitions pkgdefinitions E:/uart_block/hdl/iseProject/pkgDefinitions.vhd sub00/vhpl01 1335010958
-EN serial_receiver NULL E:/uart_block/hdl/iseProject/serial_receiver.vhd sub00/vhpl04 1335010959
 AR serial_transmitter behavioral E:/uart_block/hdl/iseProject/serial_transmitter.vhd sub00/vhpl03 1335001308
+AR baud_generator behavioral /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd sub00/vhpl07 1335531935
+EN serial_receiver NULL E:/uart_block/hdl/iseProject/serial_receiver.vhd sub00/vhpl04 1335010959
 EN serial_transmitter NULL E:/uart_block/hdl/iseProject/serial_transmitter.vhd sub00/vhpl02 1335001307
-PH pkgdefinitions NULL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd sub00/vhpl00 1335010957
 AR serial_receiver behavioral E:/uart_block/hdl/iseProject/serial_receiver.vhd sub00/vhpl05 1335010960
+PB pkgdefinitions pkgdefinitions /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd sub00/vhpl01 1335531933
+EN baud_generator NULL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd sub00/vhpl06 1335531934
+PH pkgdefinitions NULL /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd sub00/vhpl00 1335531932
