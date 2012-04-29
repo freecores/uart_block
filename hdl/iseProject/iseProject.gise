@@ -64,10 +64,11 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="serial_transmitter_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="serial_transmitter_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="serial_transmitter_xst.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testBaud_generator_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testBaud_generator_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testBaud_generator_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testDivisor_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testDivisor_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testDivisor_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testSerial_receiver_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testSerial_transmitter_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -80,7 +81,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335696912" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1335696912">
+    <transform xil_pn:end_ts="1335706001" xil_pn:in_ck="2762791571174539902" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1335706001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="baud_generator.vhd"/>
@@ -92,12 +93,13 @@
       <outfile xil_pn:name="testDivisor.vhd"/>
       <outfile xil_pn:name="testSerial_receiver.vhd"/>
       <outfile xil_pn:name="testSerial_transmitter.vhd"/>
+      <outfile xil_pn:name="uart_control.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1335696912" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8005028302593154456" xil_pn:start_ts="1335696912">
+    <transform xil_pn:end_ts="1335706001" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6042613676112735766" xil_pn:start_ts="1335706001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335696912" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5095109948935799194" xil_pn:start_ts="1335696912">
+    <transform xil_pn:end_ts="1335706001" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4641732051429320088" xil_pn:start_ts="1335706001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -105,7 +107,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335696912" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1335696912">
+    <transform xil_pn:end_ts="1335706001" xil_pn:in_ck="2762791571174539902" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1335706001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="baud_generator.vhd"/>
@@ -117,23 +119,24 @@
       <outfile xil_pn:name="testDivisor.vhd"/>
       <outfile xil_pn:name="testSerial_receiver.vhd"/>
       <outfile xil_pn:name="testSerial_transmitter.vhd"/>
+      <outfile xil_pn:name="uart_control.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1335696915" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4428763588696016622" xil_pn:start_ts="1335696912">
+    <transform xil_pn:end_ts="1335706004" xil_pn:in_ck="2762791571174539902" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1599609758225969422" xil_pn:start_ts="1335706001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testBaud_generator_beh.prj"/>
-      <outfile xil_pn:name="testBaud_generator_isim_beh.exe"/>
+      <outfile xil_pn:name="testDivisor_beh.prj"/>
+      <outfile xil_pn:name="testDivisor_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1335696915" xil_pn:in_ck="6990163578190363152" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7081210365766751130" xil_pn:start_ts="1335696915">
+    <transform xil_pn:end_ts="1335706004" xil_pn:in_ck="6966519603717532447" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4515288970544773250" xil_pn:start_ts="1335706004">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testBaud_generator_isim_beh.wdb"/>
+      <outfile xil_pn:name="testDivisor_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1334961610" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1334961610">
       <status xil_pn:value="SuccessfullyRun"/>

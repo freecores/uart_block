@@ -4,13 +4,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_arith.all;
 
+--! Use CPU Definitions package
+use work.pkgDefinitions.all;
+
 entity divisor is
     Port ( rst : in  STD_LOGIC;
            clk : in  STD_LOGIC;			  
-           quotient : out  STD_LOGIC_VECTOR (31 downto 0);
-			  reminder : out  STD_LOGIC_VECTOR (31 downto 0);
-           numerator : in  STD_LOGIC_VECTOR (31 downto 0);
-           divident : in  STD_LOGIC_VECTOR (31 downto 0);
+           quotient : out  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
+			  reminder : out  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
+           numerator : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
+           divident : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
            done : out  STD_LOGIC);
 end divisor;
 

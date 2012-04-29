@@ -33,7 +33,7 @@ ARCHITECTURE behavior OF testBaud_generator IS
    signal baud : std_logic;
 
    -- Clock period definitions (1.8432MHz)
-   constant clk_period : time := 5.43 us;
+   constant clk_period : time := 0.543 us; -- 0.543us (1.8432Mhz) 2ns (50Mhz)
  
 BEGIN
  
@@ -58,13 +58,13 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- Test the baud generator waiting for 10 clock cycles
+      -- Test the baud generator waiting for 16 clock cycles for 1.8432MHz clock
 		rst <= '1';
 		cycle_wait <= conv_std_logic_vector(16, (nBitsLarge));
-      wait for 10 us;	
+      wait for 2 ns;	
 		rst <= '0';
 
-      wait for clk_period*100;
+      wait for clk_period*300;
 
       -- Stop Simulation
 		assert false report "NONE. End of simulation." severity failure;
