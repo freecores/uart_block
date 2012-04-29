@@ -32,8 +32,8 @@ ARCHITECTURE behavior OF testBaud_generator IS
  	--Outputs
    signal baud : std_logic;
 
-   -- Clock period definitions
-   constant clk_period : time := 10 ns;
+   -- Clock period definitions (1.8432MHz)
+   constant clk_period : time := 5.43 us;
  
 BEGIN
  
@@ -60,8 +60,8 @@ BEGIN
    begin		
       -- Test the baud generator waiting for 10 clock cycles
 		rst <= '1';
-		cycle_wait <= conv_std_logic_vector(2, (nBitsLarge));
-      wait for 10 ns;	
+		cycle_wait <= conv_std_logic_vector(16, (nBitsLarge));
+      wait for 10 us;	
 		rst <= '0';
 
       wait for clk_period*100;

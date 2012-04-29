@@ -1,15 +1,13 @@
-Running: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -o /home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator_isim_beh.exe -prj /home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator_beh.prj work.testBaud_generator 
-ISim O.87xd (signature 0x8ddf5b5d)
-Number of CPUs detected in this system: 4
-Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Running: e:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o E:/uart_block/hdl/iseProject/testBaud_generator_isim_beh.exe -prj E:/uart_block/hdl/iseProject/testBaud_generator_beh.prj work.testBaud_generator 
+ISim O.87xd (signature 0xc3576ebc)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd" into library work
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" into library work
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator.vhd" into library work
+Parsing VHDL file "E:/uart_block/hdl/iseProject/pkgDefinitions.vhd" into library work
+Parsing VHDL file "E:/uart_block/hdl/iseProject/baud_generator.vhd" into library work
+Parsing VHDL file "E:/uart_block/hdl/iseProject/testBaud_generator.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 36644 KB
-Fuse CPU Usage: 1080 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -18,8 +16,8 @@ Compiling package pkgdefinitions
 Compiling architecture behavioral of entity baud_generator [baud_generator_default]
 Compiling architecture behavior of entity testbaud_generator
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 8 VHDL Units
-Built simulation executable /home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator_isim_beh.exe
-Fuse Memory Usage: 85592 KB
-Fuse CPU Usage: 1160 ms
-GCC CPU Usage: 260 ms
+Built simulation executable E:/uart_block/hdl/iseProject/testBaud_generator_isim_beh.exe
+Fuse Memory Usage: 33672 KB
+Fuse CPU Usage: 280 ms

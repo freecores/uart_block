@@ -32,6 +32,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="baud_generator.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="baud_generator.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="baud_generator_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="baud_generator_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="baud_generator_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="baud_generator_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="baud_generator_xst.xrpt"/>
@@ -75,11 +76,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1334961595" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1334961595">
+    <transform xil_pn:end_ts="1335696912" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1335696912">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335536081" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1335536081">
+    <transform xil_pn:end_ts="1335696912" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1335696912">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="baud_generator.vhd"/>
@@ -92,19 +93,19 @@
       <outfile xil_pn:name="testSerial_receiver.vhd"/>
       <outfile xil_pn:name="testSerial_transmitter.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1335532465" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8005028302593154456" xil_pn:start_ts="1335532465">
+    <transform xil_pn:end_ts="1335696912" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8005028302593154456" xil_pn:start_ts="1335696912">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335532465" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5095109948935799194" xil_pn:start_ts="1335532465">
+    <transform xil_pn:end_ts="1335696912" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5095109948935799194" xil_pn:start_ts="1335696912">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335532006" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8789037243651182739" xil_pn:start_ts="1335532006">
+    <transform xil_pn:end_ts="1335696912" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8789037243651182739" xil_pn:start_ts="1335696912">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335536081" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1335536081">
+    <transform xil_pn:end_ts="1335696912" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1335696912">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="baud_generator.vhd"/>
@@ -117,11 +118,9 @@
       <outfile xil_pn:name="testSerial_receiver.vhd"/>
       <outfile xil_pn:name="testSerial_transmitter.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1335536082" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4428763588696016622" xil_pn:start_ts="1335536081">
+    <transform xil_pn:end_ts="1335696915" xil_pn:in_ck="-5639112701713756110" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4428763588696016622" xil_pn:start_ts="1335696912">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -129,11 +128,9 @@
       <outfile xil_pn:name="testBaud_generator_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1335536083" xil_pn:in_ck="9031792592001735694" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7081210365766751130" xil_pn:start_ts="1335536082">
+    <transform xil_pn:end_ts="1335696915" xil_pn:in_ck="6990163578190363152" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7081210365766751130" xil_pn:start_ts="1335696915">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="testBaud_generator_isim_beh.wdb"/>

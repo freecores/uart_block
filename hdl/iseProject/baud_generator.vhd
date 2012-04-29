@@ -27,7 +27,9 @@ begin
 			half_cycle := '0' & cycle_wait(cycle_wait'high downto 1);
 			genTick <= '0';
 		elsif rising_edge(clk) then
-			if wait_clk_cycles = cycle_wait then				
+			-- Just decremented the cycle_wait by one because genTick would be updated on the next cycle
+			-- and we really want to bring genTick <= '1' when (wait_clk_cycles = cycle_wait)
+			if wait_clk_cycles = (cycle_wait - conv_std_logic_vector(1, (nBitsLarge-1))) then				
 				genTick <= '1';				
 				wait_clk_cycles := (others => '0');				
 			else				
