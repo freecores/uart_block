@@ -56,9 +56,8 @@ begin
 		if rst = '1' then
 			wait_clk_cycles := (others => '0');			
 			
-			-- Divide cycle_wait by 8
-			cycle_wait_oversample := '0' & cycle_wait(cycle_wait'high downto 1);
-			cycle_wait_oversample := '0' & cycle_wait_oversample(cycle_wait_oversample'high downto 1);			
+			-- Divide cycle_wait by 4
+			cycle_wait_oversample := '0' & cycle_wait(cycle_wait'high downto 1);			
 			cycle_wait_oversample := '0' & cycle_wait_oversample(cycle_wait_oversample'high downto 1);
 			
 			-- Half of cycle_wait_oversample

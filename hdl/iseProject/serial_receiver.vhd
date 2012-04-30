@@ -22,7 +22,7 @@ signal filterRx : rxFilterStates;
 signal syncDetected : std_logic;
 
 begin
-	-- First we need to oversample(8x baud rate) out serial channel to syncronize with the PC
+	-- First we need to oversample(4x baud rate) out serial channel to syncronize with the PC
 	process (rst, baudOverSampleClk, serial_in, current_s)
 	begin
 		if rst = '1' then
@@ -33,6 +33,10 @@ begin
 				when s0 =>
 					syncDetected <= '0';
 					-- Spike down detected, verify if it's valid for at least 3 cycles
+					-- We shoose a little bit on the end to enforce the baud clk to sample 
+					-- the data at the right time... iE we're going to start sampling when
+					-- the stop has been detected and we already for some of the first bit
+					-- signal
 					if serial_in = '0' then
 						filterRx <= s1;						
 					else

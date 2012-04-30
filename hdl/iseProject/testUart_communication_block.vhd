@@ -1,6 +1,8 @@
 --! Test baud_generator module
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
  
 --! Use Global Definitions package
 use work.pkgDefinitions.all;
@@ -74,15 +76,85 @@ BEGIN
    begin		
       -- Setup communication blocks
 		rst <= '1';
+		serial_in <= '1'; -- Idle..
 		cycle_wait_baud <= conv_std_logic_vector(16, (nBitsLarge));
+		start_tx <= '0';
       wait for 2 ns;	
 		rst <= '0';
+		
+		-- Send data..
+		start_tx <= '1';
+		byte_tx <= "01010101";
+		wait until data_sent_tx = '1';		
 
-      wait for clk_period*10;
+      wait for clk_period*3;
+		start_tx <= '0';
+		wait for clk_period*3;
+		
+		start_tx <= '1';
+		byte_tx <= "11000100";
+		wait until data_sent_tx = '1';
+		
+		wait for clk_period*3;
+		start_tx <= '0';
+		wait for clk_period*3;
+		
+		-- Receive data...
+		-- Receive 0x55 value (01010101)
+		serial_in <= '0'; -- Start bit
+		wait for 8.68 us;
+		
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		
+		-- Stop bit here
+		serial_in <= '1';
+		wait for clk_period*20;
+		
+		-- Receive 0xC4 value (11000100)
+		serial_in <= '0'; -- Start bit
+		wait for 8.68 us;
+		
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		
+		-- Stop bit here
+		serial_in <= '1';
+		wait for clk_period*20;
+		
+				
 
-      -- insert stimulus here 
-
-      wait;
+      -- Stop Simulation
+		assert false report "NONE. End of simulation." severity failure;
+		
    end process;
 
 END;
