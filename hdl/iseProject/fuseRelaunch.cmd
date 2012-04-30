@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "E:/uart_block/hdl/iseProject/testDivisor_isim_beh.exe" -prj "E:/uart_block/hdl/iseProject/testDivisor_beh.prj" "testDivisor" 
+-intstyle "ise" -incremental -o "/home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.exe" -prj "/home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_beh.prj" "work.testSerial_receiver" 

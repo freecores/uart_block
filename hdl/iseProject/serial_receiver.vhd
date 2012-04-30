@@ -130,11 +130,11 @@ begin
 			when bit7 =>
 				data_ready <= '0';
 				byteReceived(7) := serial_in;
+				data_byte <= byteReceived;
 				next_s <=  rx_stop;
 			
 			when rx_stop =>
-				data_ready <= '1';				
-				data_byte <= byteReceived;
+				data_ready <= '1';								
 				next_s <=  rx_stop;			
 		end case; 
 			
