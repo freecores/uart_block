@@ -11,14 +11,13 @@ use work.pkgDefinitions.all;
 END testBaud_generator;
  
 ARCHITECTURE behavior OF testBaud_generator IS 
- 
-    
- 
+      
     COMPONENT baud_generator
     PORT(
          rst : IN  std_logic;
          clk : IN  std_logic;
          cycle_wait : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
+			baud_oversample : out std_logic;
          baud : OUT  std_logic
         );
     END COMPONENT;
@@ -31,6 +30,7 @@ ARCHITECTURE behavior OF testBaud_generator IS
 
  	--Outputs
    signal baud : std_logic;
+	signal baud_oversample : std_logic;
 
    -- Clock period definitions (1.8432MHz)
    constant clk_period : time := 0.543 us; -- 0.543us (1.8432Mhz) 2ns (50Mhz)
@@ -42,6 +42,7 @@ BEGIN
           rst => rst,
           clk => clk,
           cycle_wait => cycle_wait,
+			 baud_oversample => baud_oversample,
           baud => baud
         );
 

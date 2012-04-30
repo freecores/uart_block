@@ -76,8 +76,9 @@ BEGIN
 
       wait until data_sent = '1';
 		wait for baudClk_period*3;
-
-      -- insert stimulus here 
+      
+		-- Stop Simulation
+		assert false report "NONE. End of simulation." severity failure;
 
       wait;
    end process;

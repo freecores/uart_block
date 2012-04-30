@@ -24,8 +24,8 @@ end uart_control;
 architecture Behavioral of uart_control is
 signal config_clk : std_logic_vector((nBitsLarge-1) downto 0);
 signal config_baud : std_logic_vector((nBitsLarge-1) downto 0);
-signal byte_to_receive : std_logic_vector((nBitsLarge-1) downto 0);
-signal byte_to_transmitt : std_logic_vector((nBitsLarge-1) downto 0);
+signal byte_to_receive : std_logic_vector((nBits-1) downto 0);
+signal byte_to_transmitt : std_logic_vector((nBits-1) downto 0);
 signal controlStates : uartControl;
 
 signal sigDivRst : std_logic;
@@ -70,10 +70,10 @@ begin
 						DAT_O <= config_baud;						
 					when "10" =>
 						-- Byte that will be transmitted
-						DAT_O <= "0000000000000000000000000" & byte_to_transmitt;						
+						DAT_O <= "000000000000000000000000" & byte_to_transmitt;						
 					when "11" =>
 						-- Byte that will be received
-						DAT_O <= "0000000000000000000000000" & byte_to_receive;
+						DAT_O <= "000000000000000000000000" & byte_to_receive;
 					when others =>
 						null;
 				end case;						
@@ -87,8 +87,7 @@ begin
 		if rst = '1' then
 			config_clk <= (others => '0');
 			config_baud <= (others => '0');
-			byte_to_transmitt <= (others => '0');
-			byte_to_receive <= (others => '0');
+			byte_to_transmitt <= (others => '0');			
 		elsif rising_edge(clk) then
 			if (WE = '1') and (start = '1') then
 				case reg_addr is
@@ -114,9 +113,9 @@ begin
 	begin
 		if rst = '1' then
 			controlStates <= idle;
-			baud_configured <= '0';
-			clk_configured <= '0';
-			div_result_baud_wait <= (others => '0');
+			baud_configured := '0';
+			clk_configured := '0';
+			div_result_baud_wait := (others => '0');
 			done <= '0';
 		elsif rising_edge(clk) then
 			case controlStates is				
@@ -125,10 +124,10 @@ begin
 					-- Go to config state
 					if (reg_addr = "00") and (WE = '1') then
 						controlStates <= config_state_clk;
-						clk_configured <= '1';						
+						clk_configured := '1';						
 					elsif (reg_addr = "01") and (WE = '1') then
 						controlStates <= config_state_baud;						
-						baud_configured <= '1';
+						baud_configured := '1';
 					end if;
 				
 				when config_state_clk =>

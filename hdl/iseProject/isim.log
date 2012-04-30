@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.wdb 
+Running: /home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator_isim_beh.wdb 
 ISim O.87xd (signature 0x8ddf5b5d)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -14,6 +14,7 @@ Finished circuit initialization process.
 
 ** Failure:NONE. End of simulation.
 User(VHDL) Code Called Simulation Stop
-In process testSerial_receiver.vhd:stim_proc 
+In process testBaud_generator.vhd:stim_proc 
  
 INFO: Simulator is stopped.
+# exit 0

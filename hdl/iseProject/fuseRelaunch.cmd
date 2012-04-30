@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.exe" -prj "/home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_beh.prj" "work.testSerial_receiver" 
+-intstyle "ise" -incremental -o "/home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator_isim_beh.exe" -prj "/home/laraujo/work/uart_block/hdl/iseProject/testBaud_generator_beh.prj" "work.testBaud_generator" 
