@@ -1,33 +1,28 @@
-Running: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/laraujo/work/uart_block/hdl/iseProject/testUart_communication_block_isim_beh.exe" -prj "/home/laraujo/work/uart_block/hdl/iseProject/testUart_communication_block_beh.prj" "work.testUart_communication_block" 
+Running: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -o /home/laraujo/work/uart_block/hdl/iseProject/testUart_control_isim_beh.exe -prj /home/laraujo/work/uart_block/hdl/iseProject/testUart_control_beh.prj work.testUart_control 
 ISim O.87xd (signature 0x8ddf5b5d)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd" into library work
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd" into library work
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" into library work
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" into library work
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd" into library work
-WARNING:HDLCompiler:946 - "/home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd" Line 63: Actual for formal port rst is neither a static name nor a globally static expression
-Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/testUart_communication_block.vhd" into library work
+Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd" into library work
+Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" into library work
+Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/testUart_control.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 36612 KB
-Fuse CPU Usage: 1090 ms
+Fuse Memory Usage: 36628 KB
+Fuse CPU Usage: 1070 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling package pkgdefinitions
-Compiling architecture behavioral of entity baud_generator [baud_generator_default]
-Compiling architecture behavioral of entity serial_transmitter [serial_transmitter_default]
-Compiling architecture behavioral of entity serial_receiver [serial_receiver_default]
-Compiling architecture behavioral of entity uart_communication_blocks [uart_communication_blocks_defaul...]
-Compiling architecture behavior of entity testuart_communication_block
+Compiling architecture behavioral of entity divisor [divisor_default]
+Compiling architecture behavioral of entity uart_control [uart_control_default]
+Compiling architecture behavior of entity testuart_control
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 14 VHDL Units
-Built simulation executable /home/laraujo/work/uart_block/hdl/iseProject/testUart_communication_block_isim_beh.exe
-Fuse Memory Usage: 85544 KB
-Fuse CPU Usage: 1180 ms
-GCC CPU Usage: 210 ms
+Compiled 10 VHDL Units
+Built simulation executable /home/laraujo/work/uart_block/hdl/iseProject/testUart_control_isim_beh.exe
+Fuse Memory Usage: 85688 KB
+Fuse CPU Usage: 1160 ms
+GCC CPU Usage: 400 ms

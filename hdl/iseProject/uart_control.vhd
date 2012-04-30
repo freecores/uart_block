@@ -6,19 +6,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.pkgDefinitions.all;
 
 entity uart_control is
-    Port ( rst : in  STD_LOGIC;														-- Global reset
-           clk : in  STD_LOGIC;														-- Global clock
-			  WE	: in STD_LOGIC;														-- Write enable
-           reg_addr : in  STD_LOGIC_VECTOR (1 downto 0);			  			-- Register address
+    Port ( rst : in  std_logic;														-- Global reset
+           clk : in  std_logic;														-- Global clock
+			  WE	: in std_logic;														-- Write enable
+           reg_addr : in  std_logic_vector (1 downto 0);			  			-- Register address
 			  start : in std_logic;														-- Start (Strobe)
 			  done : out std_logic;														-- Done (ACK)
-           DAT_I : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);		-- Data Input (Wishbone)
-           DAT_O : out  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);		-- Data output (Wishbone)
-			  baud_wait : out STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	-- Signal to control the baud rate frequency
+           DAT_I : in  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data Input (Wishbone)
+           DAT_O : out  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data output (Wishbone)
+			  baud_wait : out std_logic_vector ((nBitsLarge-1) downto 0);	-- Signal to control the baud rate frequency
 			  data_byte_tx : out std_logic_vector((nBits-1) downto 0);	  	-- 1 Byte to be send to serial_transmitter
 			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	-- 1 Byte to be received by serial_receiver
-           tx_data_sent : in  STD_LOGIC;										  	-- Signal comming from serial_transmitter
-           rx_data_ready : in  STD_LOGIC);										-- Signal comming from serial_receiver
+           tx_data_sent : in  std_logic;										  	-- Signal comming from serial_transmitter
+			  rst_comm_blocks : out std_logic;										-- Reset Communication blocks
+           rx_data_ready : in  std_logic);										-- Signal comming from serial_receiver
 end uart_control;
 
 architecture Behavioral of uart_control is
@@ -117,6 +118,8 @@ begin
 			clk_configured := '0';
 			div_result_baud_wait := (others => '0');
 			done <= '0';
+			sigDivRst <= '1';
+			rst_comm_blocks <= '1';
 		elsif rising_edge(clk) then
 			case controlStates is				
 				when idle =>
@@ -175,6 +178,7 @@ begin
 				
 				-- Control the serial_receiver or serial_transmitter block
 				when rx_tx_state =>															
+					rst_comm_blocks <= '0';
 					controlStates <= rx_tx_state;
 					if (WE = '1') and (start = '1') then
 						if reg_addr = "10" then

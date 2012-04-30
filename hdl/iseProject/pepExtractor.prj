@@ -1,5 +1,3 @@
-work	"baud_generator.vhd"
+work	"divisor.vhd"
 work	"pkgDefinitions.vhd"
-work	"serial_receiver.vhd"
-work	"serial_transmitter.vhd"
-work	"uart_main_blocks.vhd"
+work	"uart_control.vhd"
