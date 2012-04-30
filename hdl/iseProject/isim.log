@@ -17,3 +17,4 @@ User(VHDL) Code Called Simulation Stop
 In process testUart_control.vhd:stim_proc 
  
 INFO: Simulator is stopped.
+# exit 0

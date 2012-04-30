@@ -15,20 +15,21 @@ ARCHITECTURE behavior OF testUart_control IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT uart_control
-    Port ( rst : in  STD_LOGIC;														-- Global reset
-           clk : in  STD_LOGIC;														-- Global clock
-			  WE	: in STD_LOGIC;														-- Write enable
-           reg_addr : in  STD_LOGIC_VECTOR (1 downto 0);			  			-- Register address
+    Port ( rst : in  std_logic;														-- Global reset
+           clk : in  std_logic;														-- Global clock
+			  WE	: in std_logic;														-- Write enable
+           reg_addr : in  std_logic_vector (1 downto 0);			  			-- Register address
 			  start : in std_logic;														-- Start (Strobe)
 			  done : out std_logic;														-- Done (ACK)
-           DAT_I : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);		-- Data Input (Wishbone)
-           DAT_O : out  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);		-- Data output (Wishbone)
-			  baud_wait : out STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	-- Signal to control the baud rate frequency
+           DAT_I : in  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data Input (Wishbone)
+           DAT_O : out  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data output (Wishbone)
+			  baud_wait : out std_logic_vector ((nBitsLarge-1) downto 0);	-- Signal to control the baud rate frequency
 			  data_byte_tx : out std_logic_vector((nBits-1) downto 0);	  	-- 1 Byte to be send to serial_transmitter
 			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	-- 1 Byte to be received by serial_receiver
-           tx_data_sent : in  STD_LOGIC;										  	-- Signal comming from serial_transmitter
+           tx_data_sent : in  std_logic;										  	-- Signal comming from serial_transmitter
+			  tx_start : out std_logic;												-- Signal to start sending serial data...
 			  rst_comm_blocks : out std_logic;										-- Reset Communication blocks
-           rx_data_ready : in  STD_LOGIC);										-- Signal comming from serial_receiver
+           rx_data_ready : in  std_logic);			
     END COMPONENT;
     
 
@@ -45,6 +46,7 @@ ARCHITECTURE behavior OF testUart_control IS
 
  	--Outputs
    signal done : std_logic;
+	signal tx_start : std_logic;
 	signal rst_comm_blocks : std_logic;
    signal DAT_O : std_logic_vector((nBitsLarge-1) downto 0);
    signal baud_wait : std_logic_vector((nBitsLarge-1) downto 0);
@@ -70,6 +72,7 @@ BEGIN
           data_byte_rx => data_byte_rx,
           tx_data_sent => tx_data_sent,
 			 rst_comm_blocks => rst_comm_blocks,
+			 tx_start => tx_start,
           rx_data_ready => rx_data_ready
         );
 
@@ -119,7 +122,7 @@ BEGIN
 		WE <= '1';
 		start <= '1';
 		DAT_I <= x"00000055";		
-		wait for clk_period*10;
+		wait for clk_period*10;	-- No point to use wait until because we're not connected to the comm block yet
 
       -- Stop Simulation
 		assert false report "NONE. End of simulation." severity failure;

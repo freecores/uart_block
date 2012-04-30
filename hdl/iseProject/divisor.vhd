@@ -22,7 +22,7 @@ architecture Behavioral of divisor is
 begin
 	
 	-- Division algorithm Q=N/D
-	process (rst, clk)
+	process (rst, clk, numerator, divident)
 	variable Q : unsigned(quotient'length-1 downto 0);
 	variable R : unsigned(reminder'length-1 downto 0);
 	variable D : unsigned(reminder'length-1 downto 0);

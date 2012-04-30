@@ -20,7 +20,7 @@ architecture Behavioral of baud_generator is
 signal genTick : std_logic;
 signal genTickOverSample : std_logic;
 begin
-	process (rst, clk)
+	process (rst, clk, cycle_wait)
 	variable wait_clk_cycles : STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
 	variable half_cycle : STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
 	begin
@@ -48,7 +48,7 @@ begin
 	baud_oversample <= genTickOverSample;
 	
 	-- Process to generate the overclocked (8x) sample
-	process (rst, clk)
+	process (rst, clk, cycle_wait)
 	variable wait_clk_cycles : STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
 	variable half_cycle : STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
 	variable cycle_wait_oversample : STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);

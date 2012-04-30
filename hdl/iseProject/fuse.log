@@ -10,7 +10,7 @@ Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/testUart_control
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 36628 KB
-Fuse CPU Usage: 1070 ms
+Fuse CPU Usage: 1090 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -20,9 +20,8 @@ Compiling architecture behavioral of entity divisor [divisor_default]
 Compiling architecture behavioral of entity uart_control [uart_control_default]
 Compiling architecture behavior of entity testuart_control
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 10 VHDL Units
 Built simulation executable /home/laraujo/work/uart_block/hdl/iseProject/testUart_control_isim_beh.exe
 Fuse Memory Usage: 85688 KB
-Fuse CPU Usage: 1160 ms
+Fuse CPU Usage: 1180 ms
 GCC CPU Usage: 400 ms

@@ -1,56 +1,64 @@
-V3 29
-FL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd 2012/04/30.15:47:40 O.87xd
-EN work/baud_generator 1335796914 \
+V3 34
+FL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd 2012/04/30.18:19:47 O.87xd
+EN work/baud_generator 1335802835 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd \
       PB ieee/std_logic_1164 1325952872 PB ieee/STD_LOGIC_UNSIGNED 1325952875 \
-      PB ieee/std_logic_arith 1325952873 PB work/pkgDefinitions 1335796987
-AR work/baud_generator/Behavioral 1335796915 \
+      PB ieee/std_logic_arith 1325952873 PB work/pkgDefinitions 1335802834
+AR work/baud_generator/Behavioral 1335802836 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd \
-      EN work/baud_generator 1335796914
-FL /home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd 2012/04/30.07:41:35 O.87xd
-EN work/divisor 1335796988 \
+      EN work/baud_generator 1335802835
+FL /home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd 2012/04/30.18:18:59 O.87xd
+EN work/divisor 1335802841 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd \
       PB ieee/std_logic_1164 1325952872 PB ieee/std_logic_arith 1325952873 \
-      PB work/pkgDefinitions 1335796987
-AR work/divisor/Behavioral 1335796989 \
-      FL /home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd EN work/divisor 1335796988
+      PB work/pkgDefinitions 1335802834
+AR work/divisor/Behavioral 1335802842 \
+      FL /home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd EN work/divisor 1335802841
 FL /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd 2012/04/30.08:38:25 O.87xd
-PH work/pkgDefinitions 1335796986 \
+PH work/pkgDefinitions 1335802833 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd \
       PB ieee/std_logic_1164 1325952872
-PB work/pkgDefinitions 1335796987 \
+PB work/pkgDefinitions 1335802834 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd \
-      PH work/pkgDefinitions 1335796986
-FL /home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd 2012/04/30.15:53:30 O.87xd
-EN work/serial_receiver 1335796918 \
+      PH work/pkgDefinitions 1335802833
+FL /home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd 2012/04/30.18:20:26 O.87xd
+EN work/serial_receiver 1335802839 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd \
-      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335796987
-AR work/serial_receiver/Behavioral 1335796919 \
+      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335802834
+AR work/serial_receiver/Behavioral 1335802840 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd \
-      EN work/serial_receiver 1335796918
+      EN work/serial_receiver 1335802839
 FL /home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd 2012/04/23.13:47:40 O.87xd
-EN work/serial_transmitter 1335796916 \
+EN work/serial_transmitter 1335802837 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd \
-      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335796987
-AR work/serial_transmitter/Behavioral 1335796917 \
+      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335802834
+AR work/serial_transmitter/Behavioral 1335802838 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd \
-      EN work/serial_transmitter 1335796916
+      EN work/serial_transmitter 1335802837
 FL /home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd 2012/04/30.14:08:50 O.87xd
-EN work/uart_communication_blocks 1335796920 \
+EN work/uart_communication_blocks 1335802845 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd \
-      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335796987
-AR work/uart_communication_blocks/Behavioral 1335796921 \
+      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335802834
+AR work/uart_communication_blocks/Behavioral 1335802846 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd \
-      EN work/uart_communication_blocks 1335796920 CP baud_generator \
+      EN work/uart_communication_blocks 1335802845 CP baud_generator \
       CP serial_transmitter CP serial_receiver
-FL /home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd 2012/04/30.10:14:50 O.87xd
-EN work/uart_control 1335796990 \
+FL /home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd 2012/04/30.18:12:57 O.87xd
+EN work/uart_control 1335802843 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd \
-      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335796987
-AR work/uart_control/Behavioral 1335796991 \
+      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335802834
+AR work/uart_control/Behavioral 1335802844 \
       FL /home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd \
-      EN work/uart_control 1335796990 CP divisor
+      EN work/uart_control 1335802843 CP divisor
 FL /home/laraujo/work/uart_block/hdl/iseProject/uart_main_blocks.vhd 2012/04/30.12:49:26 O.87xd
+FL /home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_slave.vhd 2012/04/30.18:16:53 O.87xd
+EN work/uart_wishbone_slave 1335802847 \
+      FL /home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_slave.vhd \
+      PB ieee/std_logic_1164 1325952872 PB work/pkgDefinitions 1335802834
+AR work/uart_wishbone_slave/Behavioral 1335802848 \
+      FL /home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_slave.vhd \
+      EN work/uart_wishbone_slave 1335802847 CP uart_control \
+      CP uart_communication_blocks
 FL E:/uart_block/hdl/iseProject/pkgDefinitions.vhd 2012/04/21.14:17:54 O.87xd
 FL E:/uart_block/hdl/iseProject/serial_receiver.vhd 2012/04/21.14:22:33 O.87xd
 FL E:/uart_block/hdl/iseProject/serial_transmitter.vhd 2012/04/21.09:27:16 O.87xd

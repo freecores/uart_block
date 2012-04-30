@@ -87,7 +87,7 @@ begin
 	end process;
 	
 	-- Process to handle the serial receive
-	process (current_s) 
+	process (current_s, serial_in) 
 	variable byteReceived : STD_LOGIC_VECTOR ((nBits-1) downto 0);
 	begin
 		case current_s is

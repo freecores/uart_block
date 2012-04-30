@@ -18,6 +18,7 @@ entity uart_control is
 			  data_byte_tx : out std_logic_vector((nBits-1) downto 0);	  	-- 1 Byte to be send to serial_transmitter
 			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	-- 1 Byte to be received by serial_receiver
            tx_data_sent : in  std_logic;										  	-- Signal comming from serial_transmitter
+			  tx_start : out std_logic;												-- Signal to start sending serial data...
 			  rst_comm_blocks : out std_logic;										-- Reset Communication blocks
            rx_data_ready : in  std_logic);										-- Signal comming from serial_receiver
 end uart_control;
@@ -120,6 +121,7 @@ begin
 			done <= '0';
 			sigDivRst <= '1';
 			rst_comm_blocks <= '1';
+			tx_start <= '0';
 		elsif rising_edge(clk) then
 			case controlStates is				
 				when idle =>
@@ -179,6 +181,7 @@ begin
 				-- Control the serial_receiver or serial_transmitter block
 				when rx_tx_state =>															
 					rst_comm_blocks <= '0';
+					tx_start <= '0';
 					controlStates <= rx_tx_state;
 					if (WE = '1') and (start = '1') then
 						if reg_addr = "10" then
@@ -197,6 +200,7 @@ begin
 					
 				-- Send data and wait to transmit
 				when tx_state_wait =>
+					tx_start <= '1';
 					data_byte_tx <= byte_to_transmitt;
 					if tx_data_sent = '0' then
 						controlStates <= tx_state_wait;
