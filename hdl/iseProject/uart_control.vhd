@@ -191,7 +191,7 @@ begin
 				-- Control the serial_receiver or serial_transmitter block
 				when rx_tx_state =>															
 					rst_comm_blocks <= '0';
-					tx_start <= '0';
+					tx_start <= '0';				
 					controlStates <= rx_tx_state;
 					if (WE = '1') and (start = '1') then
 						if reg_addr = "10" then
@@ -201,9 +201,21 @@ begin
 					end if;
 					
 					if (WE = '0') and (start = '1') then
-						if reg_addr = "11" then
-							controlStates <= rx_state_wait;							
-						end if;
+						case reg_addr is
+							when "11" =>
+								controlStates <= rx_state_wait;
+							
+							when "10" =>
+								done <= '1';
+								controlStates <= rx_tx_state;
+							
+							when others =>
+								null;
+						end case;						
+					end if;
+					
+					if (start = '0') then
+						done <= '0';
 					end if;
 					
 					

@@ -1,4 +1,4 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "E:/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe" -prj "E:/uart_block/hdl/iseProject/testUart_wishbone_slave_beh.prj" "work.testUart_wishbone_slave" 
+Running: e:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o E:/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe -prj E:/uart_block/hdl/iseProject/testUart_wishbone_slave_beh.prj work.testUart_wishbone_slave 
 ISim O.87xd (signature 0xc3576ebc)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
@@ -30,7 +30,8 @@ Compiling architecture behavioral of entity uart_communication_blocks [uart_comm
 Compiling architecture behavioral of entity uart_wishbone_slave [uart_wishbone_slave_default]
 Compiling architecture behavior of entity testuart_wishbone_slave
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 21 VHDL Units
 Built simulation executable E:/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe
-Fuse Memory Usage: 37732 KB
-Fuse CPU Usage: 405 ms
+Fuse Memory Usage: 37372 KB
+Fuse CPU Usage: 420 ms

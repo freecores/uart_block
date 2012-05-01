@@ -116,13 +116,13 @@ BEGIN
 		ADR_I0 <= (others => 'U');
 		wait for CLK_I_period*500;
 		
-		-- Receive data
+		-- Receive data from serial
 		ADR_I0 <= "11";
 		WE_I <= '0';
 		STB_I <= '1';
 		wait for CLK_I_period*100; -- Error !!!!! (Should not need this!!)
 
-		-- Receive data...
+		-- Receive data... (Should work by retainning the last received value...)
 		-- Receive 0x55 value (01010101)
 		serial_in <= '0'; -- Start bit
 		wait for 8.68 us;
@@ -147,6 +147,15 @@ BEGIN
 		-- Stop bit here
 		serial_in <= '1';		
 		
+		wait until ACK_O = '1';
+		wait for CLK_I_period*100;
+		STB_I <= '0';
+		wait for CLK_I_period*100;
+		
+		-- Read byte sent...
+		ADR_I0 <= "10";
+		WE_I <= '0';
+		STB_I <= '1';		
 		wait until ACK_O = '1';
 		wait for CLK_I_period*100;
 
