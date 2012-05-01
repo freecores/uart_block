@@ -58,6 +58,10 @@ begin
 				done <= '1';
 				quotient <= CONV_STD_LOGIC_VECTOR(Q,32);
 				reminder <= CONV_STD_LOGIC_VECTOR(R,32);
+				
+				-- Used to avoid transparent latch (Good practise)
+				D := unsigned(divident);	
+				N := unsigned(numerator);
 			end if;
 		end if;
 	end process;

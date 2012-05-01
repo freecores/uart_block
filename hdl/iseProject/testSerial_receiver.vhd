@@ -101,7 +101,7 @@ BEGIN
 		
 		-- Stop bit here
 		serial_in <= '1';
-		wait for baudClk_period * 1;
+		wait for baudClk_period * 8;
 		
 		-- Receive 0x55 value (01010101)
 		-- Start bit here

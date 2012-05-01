@@ -1,37 +1,10 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   14:35:04 04/20/2012
--- Design Name:   
--- Module Name:   /home/laraujo/work/uartVHDLWishBone/testDivisor.vhd
--- Project Name:  uartVHDLWishBone
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: divisor
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
+--! Test divisor module
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_arith.all;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
+--! Use Global Definitions package
+use work.pkgDefinitions.all;
  
 ENTITY testDivisor IS
 END testDivisor;
@@ -44,10 +17,10 @@ ARCHITECTURE behavior OF testDivisor IS
     PORT(
          rst : IN  std_logic;
          clk : IN  std_logic;
-         quotient : OUT  std_logic_vector(31 downto 0);
-         reminder : OUT  std_logic_vector(31 downto 0);
-         numerator : IN  std_logic_vector(31 downto 0);
-         divident : IN  std_logic_vector(31 downto 0);
+         quotient : OUT  std_logic_vector((nBitsLarge-1) downto 0);
+         reminder : OUT  std_logic_vector((nBitsLarge-1) downto 0);
+         numerator : IN  std_logic_vector((nBitsLarge-1) downto 0);
+         divident : IN  std_logic_vector((nBitsLarge-1) downto 0);
          done : OUT  std_logic
         );
     END COMPONENT;
@@ -56,12 +29,12 @@ ARCHITECTURE behavior OF testDivisor IS
    --Inputs
    signal rst : std_logic := '0';
    signal clk : std_logic := '0';
-   signal numerator : std_logic_vector(31 downto 0) := (others => '0');
-   signal divident : std_logic_vector(31 downto 0) := (others => '0');
+   signal numerator : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');
+   signal divident : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');
 
  	--Outputs
-   signal quotient : std_logic_vector(31 downto 0);
-   signal reminder : std_logic_vector(31 downto 0);
+   signal quotient : std_logic_vector((nBitsLarge-1) downto 0);
+   signal reminder : std_logic_vector((nBitsLarge-1) downto 0);
    signal done : std_logic;
 
    -- Clock period definitions

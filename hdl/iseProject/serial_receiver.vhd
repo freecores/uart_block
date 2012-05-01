@@ -17,7 +17,7 @@ entity serial_receiver is
 end serial_receiver;
 
 architecture Behavioral of serial_receiver is
-signal current_s,next_s: rxStates; 
+signal current_s: rxStates; 
 signal filterRx : rxFilterStates; 
 signal syncDetected : std_logic;
 
@@ -69,80 +69,78 @@ begin
 					end if; 
 					
 					-- Reset out sync detector when finished to receive a byte
-					if current_s = rx_stop then
+					if current_s = rx_idle then
 						filterRx <= s0;						
 					end if;
 			end case;
 		end if;
 	end process;
-	
-	-- Next state logic for rx Receiver (On this case our reset is the syncDetected signal
+		
+	-- Process to handle the serial receive (On this case our reset is the syncDetected signal
+	-- Always include all of your signals on the sensivity list!! (Even if the simulation is already ok)
 	process (syncDetected, baudClk, serial_in) 
-	begin
-		if syncDetected = '0' then
-			current_s <= rx_idle;			
-		elsif rising_edge(baudClk) then
-			current_s <= next_s;
-		end if;
-	end process;
-	
-	-- Process to handle the serial receive
-	process (current_s, serial_in) 
 	variable byteReceived : STD_LOGIC_VECTOR ((nBits-1) downto 0);
 	begin
-		case current_s is
-			when rx_idle =>
-				data_ready <= '0';
-				byteReceived := (others => 'Z');
-				next_s <=  bit0;
-			
-			when bit0 =>
-				data_ready <= '0';
-				byteReceived(0) := serial_in;
-				next_s <=  bit1;
-			
-			when bit1 =>
-				data_ready <= '0';
-				byteReceived(1) := serial_in;
-				next_s <=  bit2;
-			
-			when bit2 =>
-				data_ready <= '0';
-				byteReceived(2) := serial_in;
-				next_s <=  bit3;
-			
-			when bit3 =>
-				data_ready <= '0';
-				byteReceived(3) := serial_in;
-				next_s <=  bit4;
-			
-			when bit4 =>
-				data_ready <= '0';
-				byteReceived(4) := serial_in;
-				next_s <=  bit5;
-			
-			when bit5 =>
-				data_ready <= '0';
-				byteReceived(5) := serial_in;
-				next_s <=  bit6;
-			
-			when bit6 =>
-				data_ready <= '0';
-				byteReceived(6) := serial_in;
-				next_s <=  bit7;
-				
-			when bit7 =>
-				data_ready <= '0';
-				byteReceived(7) := serial_in;
-				data_byte <= byteReceived;
-				next_s <=  rx_stop;
-			
-			when rx_stop =>
-				data_ready <= '1';								
-				next_s <=  rx_stop;			
-		end case; 
-			
-	end process;
+		if syncDetected = '0' then
+			current_s <= bit0;			
+			data_ready <= '0';
+			byteReceived := (others => '0');
+		elsif rising_edge(baudClk) then
+			case current_s is				
+				when bit0 =>
+					data_ready <= '0';				
+					byteReceived(0) := serial_in;
+					current_s <=  bit1;
 
+				when bit1 =>
+					data_ready <= '0';
+					byteReceived(1) := serial_in;
+					current_s <=  bit2;
+
+				when bit2 =>
+					data_ready <= '0';
+					byteReceived(2) := serial_in;
+					current_s <=  bit3;
+
+				when bit3 =>
+					data_ready <= '0';
+					byteReceived(3) := serial_in;
+					current_s <=  bit4;
+
+				when bit4 =>
+					data_ready <= '0';
+					byteReceived(4) := serial_in;
+					current_s <=  bit5;
+
+				when bit5 =>
+					data_ready <= '0';
+					byteReceived(5) := serial_in;
+					current_s <=  bit6;
+
+				when bit6 =>
+					data_ready <= '0';
+					byteReceived(6) := serial_in;
+					current_s <=  bit7;
+					
+				when bit7 =>
+					data_ready <= '0';
+					byteReceived(7) := serial_in;
+					data_byte <= byteReceived;
+					current_s <=  rx_stop;
+
+				when rx_stop =>
+					data_ready <= '1';			
+					data_byte <= byteReceived;				
+					current_s <=  rx_idle;	
+
+				when rx_idle =>
+					data_ready <= '1';			
+					data_byte <= byteReceived;				
+					current_s <=  rx_idle;	
+										
+			end case; 
+		end if;
+	end process;
+		
 end Behavioral;
 

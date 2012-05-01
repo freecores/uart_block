@@ -1,18 +1,21 @@
-Release 13.4 - xst O.87xd (nt64)
+Release 13.4 - xst O.87xd (lin)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Reading design: serial_transmitter.prj
+--> 
+Reading design: serial_transmitter.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -104,10 +107,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "E:/uart_block/hdl/iseProject/pkgDefinitions.vhd" in Library work.
-Package <pkgdefinitions> compiled.
-Package body <pkgdefinitions> compiled.
-Compiling vhdl file "E:/uart_block/hdl/iseProject/serial_transmitter.vhd" in Library work.
+Compiling vhdl file "/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd" in Library work.
+Architecture pkgdefinitions of Entity pkgdefinitions is up to date.
+Compiling vhdl file "/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd" in Library work.
 Architecture behavioral of Entity serial_transmitter is up to date.
 
 =========================================================================
@@ -130,7 +132,7 @@ Entity <serial_transmitter> analyzed. Unit <serial_transmitter> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <serial_transmitter>.
-    Related source file is "E:/uart_block/hdl/iseProject/serial_transmitter.vhd".
+    Related source file is "/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd".
     Found finite state machine <FSM_0> for signal <current_s>.
     -----------------------------------------------------------------------
     | States             | 12                                             |
@@ -373,12 +375,13 @@ Delay:               8.540ns (Levels of Logic = 5)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.00 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.47 secs
  
 --> 
 
-Total memory usage is 255476 kilobytes
+
+Total memory usage is 163788 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

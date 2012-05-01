@@ -1,18 +1,21 @@
-Release 13.4 - xst O.87xd (nt64)
+Release 13.4 - xst O.87xd (lin)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
---> Reading design: serial_receiver.prj
+--> 
+Reading design: serial_receiver.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -104,11 +107,10 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "E:/uart_block/hdl/iseProject/pkgDefinitions.vhd" in Library work.
+Compiling vhdl file "/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd" in Library work.
 Architecture pkgdefinitions of Entity pkgdefinitions is up to date.
-Compiling vhdl file "E:/uart_block/hdl/iseProject/serial_receiver.vhd" in Library work.
-Entity <serial_receiver> compiled.
-Entity <serial_receiver> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" in Library work.
+Architecture behavioral of Entity serial_receiver is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -120,8 +122,6 @@ Analyzing hierarchy for entity <serial_receiver> in library <work> (architecture
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <serial_receiver> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "E:/uart_block/hdl/iseProject/serial_receiver.vhd" line 86: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <serial_in>
 Entity <serial_receiver> analyzed. Unit <serial_receiver> generated.
 
 
@@ -132,18 +132,18 @@ Entity <serial_receiver> analyzed. Unit <serial_receiver> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <serial_receiver>.
-    Related source file is "E:/uart_block/hdl/iseProject/serial_receiver.vhd".
+    Related source file is "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd".
     Found finite state machine <FSM_0> for signal <current_s>.
     -----------------------------------------------------------------------
     | States             | 10                                             |
     | Transitions        | 10                                             |
     | Inputs             | 0                                              |
-    | Outputs            | 10                                             |
+    | Outputs            | 11                                             |
     | Clock              | baudClk                   (rising_edge)        |
     | Reset              | syncDetected              (negative)           |
     | Reset type         | asynchronous                                   |
-    | Reset State        | rx_idle                                        |
-    | Power Up State     | rx_idle                                        |
+    | Reset State        | bit0                                           |
+    | Power Up State     | bit0                                           |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
@@ -161,37 +161,13 @@ Synthesizing Unit <serial_receiver>.
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-WARNING:Xst:737 - Found 8-bit latch for signal <data_byte>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<0>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<1>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<2>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<3>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<4>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<5>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<6>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtridata_byteReceived<7>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<0>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<1>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<2>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<3>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<4>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<5>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<6>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_byteReceived<7>> created at line 92. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 8-bit tristate buffer for signal <byteReceived>.
+    Found 1-bit register for signal <data_ready>.
+    Found 8-bit register for signal <data_byte>.
+    Found 8-bit register for signal <byteReceived>.
     Found 1-bit register for signal <syncDetected>.
     Summary:
 	inferred   2 Finite State Machine(s).
-	inferred   1 D-type flip-flop(s).
-	inferred   8 Tristate(s).
+	inferred  18 D-type flip-flop(s).
 Unit <serial_receiver> synthesized.
 
 
@@ -199,13 +175,9 @@ Unit <serial_receiver> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 1
- 1-bit register                                        : 1
-# Latches                                              : 17
- 1-bit latch                                           : 16
- 8-bit latch                                           : 1
-# Tristates                                            : 8
- 1-bit tristate buffer                                 : 8
+# Registers                                            : 11
+ 1-bit register                                        : 10
+ 8-bit register                                        : 1
 
 =========================================================================
 
@@ -228,16 +200,16 @@ Optimizing FSM <current_s/FSM> on signal <current_s[1:10]> with one-hot encoding
 -----------------------
  State   | Encoding
 -----------------------
- rx_idle | 0000000001
- bit0    | 0000000010
- bit1    | 0000000100
- bit2    | 0000001000
- bit3    | 0000010000
- bit4    | 0000100000
- bit5    | 0001000000
- bit6    | 0010000000
- bit7    | 0100000000
- rx_stop | 1000000000
+ bit0    | 0000000001
+ bit1    | 0000000010
+ bit2    | 0000000100
+ bit3    | 0000001000
+ bit4    | 0000010000
+ bit5    | 0000100000
+ bit6    | 0001000000
+ bit7    | 0010000000
+ rx_stop | 0100000000
+ rx_idle | 1000000000
 -----------------------
 
 =========================================================================
@@ -245,18 +217,15 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 2
-# Registers                                            : 1
- Flip-Flops                                            : 1
-# Latches                                              : 17
- 1-bit latch                                           : 16
- 8-bit latch                                           : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2042 - Unit serial_receiver: 8 internal tristates are replaced by logic (pull-up yes): byteReceived<0>, byteReceived<1>, byteReceived<2>, byteReceived<3>, byteReceived<4>, byteReceived<5>, byteReceived<6>, byteReceived<7>.
+INFO:Xst:2261 - The FF/Latch <current_s_FSM_FFd1> in Unit <serial_receiver> is equivalent to the following FF/Latch, which will be removed : <data_ready> 
 
 Optimizing unit <serial_receiver> ...
 
@@ -270,8 +239,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 13
- Flip-Flops                                            : 13
+# Registers                                            : 29
+ Flip-Flops                                            : 29
 
 =========================================================================
 
@@ -300,19 +269,21 @@ Design Statistics
 # IOs                              : 13
 
 Cell Usage :
-# BELS                             : 39
+# BELS                             : 19
 #      GND                         : 1
-#      INV                         : 3
-#      LUT2                        : 12
-#      LUT3                        : 8
-#      LUT4                        : 14
+#      INV                         : 1
+#      LUT2                        : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 1
+#      LUT3_D                      : 1
+#      LUT4                        : 11
+#      LUT4_D                      : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 37
+# FlipFlops/Latches                : 29
 #      FDC                         : 11
-#      FDCE                        : 1
+#      FDCE                        : 9
+#      FDE                         : 8
 #      FDP                         : 1
-#      LD                          : 17
-#      LDE                         : 7
 # Clock Buffers                    : 2
 #      BUFGP                       : 2
 # IO Buffers                       : 11
@@ -325,12 +296,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       20  out of   4656     0%  
+ Number of Slices:                       19  out of   4656     0%  
  Number of Slice Flip Flops:             29  out of   9312     0%  
- Number of 4 input LUTs:                 37  out of   9312     0%  
+ Number of 4 input LUTs:                 17  out of   9312     0%  
  Number of IOs:                          13
  Number of bonded IOBs:                  13  out of    232     5%  
-    IOB Flip Flops:                       8
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -351,44 +321,29 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------------------------+--------------------------------+-------+
-Clock Signal                                                     | Clock buffer(FF name)          | Load  |
------------------------------------------------------------------+--------------------------------+-------+
-baudOverSampleClk                                                | BUFGP                          | 3     |
-current_s_FSM_FFd8                                               | NONE(Mtridata_byteReceived<7>) | 7     |
-Mtrien_byteReceived<7>_not0001(Mtrien_byteReceived<7>_not00011:O)| NONE(*)(Mtrien_byteReceived<7>)| 1     |
-Mtrien_byteReceived<6>_not0001(Mtrien_byteReceived<6>_not0001:O) | NONE(*)(Mtrien_byteReceived<6>)| 1     |
-Mtrien_byteReceived<5>_not0001(Mtrien_byteReceived<5>_not00011:O)| NONE(*)(Mtrien_byteReceived<5>)| 1     |
-Mtrien_byteReceived<4>_not0001(Mtrien_byteReceived<4>_not0001:O) | NONE(*)(Mtrien_byteReceived<4>)| 1     |
-Mtrien_byteReceived<3>_not0001(Mtrien_byteReceived<3>_not00011:O)| NONE(*)(Mtrien_byteReceived<3>)| 1     |
-Mtrien_byteReceived<2>_not0001(Mtrien_byteReceived<2>_not00011:O)| NONE(*)(Mtrien_byteReceived<2>)| 1     |
-Mtrien_byteReceived<1>_not0001(Mtrien_byteReceived<1>_not00011:O)| NONE(*)(Mtrien_byteReceived<1>)| 1     |
-Mtrien_byteReceived<0>_not0001(Mtrien_byteReceived<0>_not00011:O)| NONE(*)(Mtrien_byteReceived<0>)| 1     |
-current_s_FSM_FFd9                                               | NONE(Mtridata_byteReceived<0>) | 1     |
-baudClk                                                          | BUFGP                          | 10    |
-current_s_FSM_FFd1                                               | NONE(data_byte_0)              | 8     |
------------------------------------------------------------------+--------------------------------+-------+
-(*) These 8 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+baudOverSampleClk                  | BUFGP                  | 3     |
+baudClk                            | BUFGP                  | 26    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------------------------+-------------------------+-------+
-Control Signal                                                 | Buffer(FF name)         | Load  |
----------------------------------------------------------------+-------------------------+-------+
-current_s_FSM_Acst_FSM_inv(current_s_FSM_Acst_FSM_inv1_INV_0:O)| NONE(current_s_FSM_FFd1)| 10    |
-rst                                                            | IBUF                    | 3     |
----------------------------------------------------------------+-------------------------+-------+
+---------------------------------------------------------------+------------------------+-------+
+Control Signal                                                 | Buffer(FF name)        | Load  |
+---------------------------------------------------------------+------------------------+-------+
+current_s_FSM_Acst_FSM_inv(current_s_FSM_Acst_FSM_inv1_INV_0:O)| NONE(byteReceived_0)   | 18    |
+rst                                                            | IBUF                   | 3     |
+---------------------------------------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 2.213ns (Maximum Frequency: 451.875MHz)
-   Minimum input arrival time before clock: 5.900ns
-   Maximum output required time after clock: 4.745ns
+   Minimum period: 4.853ns (Maximum Frequency: 206.058MHz)
+   Minimum input arrival time before clock: 4.569ns
+   Maximum output required time after clock: 4.450ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -397,135 +352,96 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'baudOverSampleClk'
-  Clock period: 2.213ns (frequency: 451.875MHz)
+  Clock period: 2.489ns (frequency: 401.768MHz)
   Total number of paths / destination ports: 6 / 3
 -------------------------------------------------------------------------
-Delay:               2.213ns (Levels of Logic = 1)
-  Source:            filterRx_FSM_FFd1 (FF)
-  Destination:       filterRx_FSM_FFd2 (FF)
+Delay:               2.489ns (Levels of Logic = 1)
+  Source:            syncDetected (FF)
+  Destination:       syncDetected (FF)
   Source Clock:      baudOverSampleClk rising
   Destination Clock: baudOverSampleClk rising
 
-  Data Path: filterRx_FSM_FFd1 to filterRx_FSM_FFd2
+  Data Path: syncDetected to syncDetected
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.591   0.610  filterRx_FSM_FFd1 (filterRx_FSM_FFd1)
-     LUT2:I1->O            1   0.704   0.000  filterRx_FSM_FFd2-In1 (filterRx_FSM_FFd2-In)
-     FDC:D                     0.308          filterRx_FSM_FFd2
+     FDC:C->Q             10   0.591   0.886  syncDetected (syncDetected)
+     LUT4:I3->O            1   0.704   0.000  syncDetected_mux00001 (syncDetected_mux0000)
+     FDC:D                     0.308          syncDetected
     ----------------------------------------
-    Total                      2.213ns (1.603ns logic, 0.610ns route)
-                                       (72.4% logic, 27.6% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'current_s_FSM_FFd8'
-  Clock period: 2.170ns (frequency: 460.829MHz)
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Delay:               2.170ns (Levels of Logic = 1)
-  Source:            Mtridata_byteReceived<7> (LATCH)
-  Destination:       Mtridata_byteReceived<7> (LATCH)
-  Source Clock:      current_s_FSM_FFd8 rising
-  Destination Clock: current_s_FSM_FFd8 rising
-
-  Data Path: Mtridata_byteReceived<7> to Mtridata_byteReceived<7>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDE:G->Q              2   0.676   0.482  Mtridata_byteReceived<7> (Mtridata_byteReceived<7>)
-     LUT3:I2->O            1   0.704   0.000  Mtridata_byteReceived<7>_mux00001 (Mtridata_byteReceived<7>_mux0000)
-     LDE:D                     0.308          Mtridata_byteReceived<7>
-    ----------------------------------------
-    Total                      2.170ns (1.688ns logic, 0.482ns route)
-                                       (77.8% logic, 22.2% route)
+    Total                      2.489ns (1.603ns logic, 0.886ns route)
+                                       (64.4% logic, 35.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'baudClk'
-  Clock period: 1.950ns (frequency: 512.821MHz)
-  Total number of paths / destination ports: 9 / 9
+  Clock period: 4.853ns (frequency: 206.058MHz)
+  Total number of paths / destination ports: 113 / 25
 -------------------------------------------------------------------------
-Delay:               1.950ns (Levels of Logic = 0)
-  Source:            current_s_FSM_FFd10 (FF)
-  Destination:       current_s_FSM_FFd9 (FF)
+Delay:               4.853ns (Levels of Logic = 3)
+  Source:            current_s_FSM_FFd7 (FF)
+  Destination:       data_byte_0 (FF)
   Source Clock:      baudClk rising
   Destination Clock: baudClk rising
 
-  Data Path: current_s_FSM_FFd10 to current_s_FSM_FFd9
+  Data Path: current_s_FSM_FFd7 to data_byte_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q             17   0.591   1.051  current_s_FSM_FFd10 (current_s_FSM_FFd10)
-     FDC:D                     0.308          current_s_FSM_FFd9
+     FDC:C->Q              3   0.591   0.706  current_s_FSM_FFd7 (current_s_FSM_FFd7)
+     LUT4:I0->O            1   0.704   0.424  data_byte_mux0000<0>1_SW0 (N5)
+     LUT4_D:I3->O          7   0.704   0.712  data_byte_mux0000<0>1 (N01)
+     LUT4:I3->O            1   0.704   0.000  data_byte_mux0000<6>1 (data_byte_mux0000<6>)
+     FDE:D                     0.308          data_byte_6
     ----------------------------------------
-    Total                      1.950ns (0.899ns logic, 1.051ns route)
-                                       (46.1% logic, 53.9% route)
+    Total                      4.853ns (3.011ns logic, 1.842ns route)
+                                       (62.0% logic, 38.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'baudOverSampleClk'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              3.287ns (Levels of Logic = 2)
+Offset:              3.366ns (Levels of Logic = 2)
   Source:            serial_in (PAD)
-  Destination:       syncDetected (FF)
+  Destination:       filterRx_FSM_FFd2 (FF)
   Destination Clock: baudOverSampleClk rising
 
-  Data Path: serial_in to syncDetected
+  Data Path: serial_in to filterRx_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.218   1.057  serial_in_IBUF (serial_in_IBUF)
+     IBUF:I->O            12   1.218   1.136  serial_in_IBUF (serial_in_IBUF)
      LUT2:I0->O            1   0.704   0.000  filterRx_FSM_FFd2-In1 (filterRx_FSM_FFd2-In)
      FDC:D                     0.308          filterRx_FSM_FFd2
     ----------------------------------------
-    Total                      3.287ns (2.230ns logic, 1.057ns route)
-                                       (67.8% logic, 32.2% route)
+    Total                      3.366ns (2.230ns logic, 1.136ns route)
+                                       (66.3% logic, 33.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'current_s_FSM_FFd8'
-  Total number of paths / destination ports: 8 / 7
+Timing constraint: Default OFFSET IN BEFORE for Clock 'baudClk'
+  Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              5.900ns (Levels of Logic = 4)
+Offset:              4.569ns (Levels of Logic = 3)
   Source:            serial_in (PAD)
-  Destination:       Mtridata_byteReceived<6> (LATCH)
-  Destination Clock: current_s_FSM_FFd8 rising
+  Destination:       data_byte_7 (FF)
+  Destination Clock: baudClk rising
 
-  Data Path: serial_in to Mtridata_byteReceived<6>
+  Data Path: serial_in to data_byte_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.218   1.057  serial_in_IBUF (serial_in_IBUF)
-     LUT3:I0->O            3   0.704   0.610  Mtridata_byteReceived<6>_mux000021 (N8)
-     LUT3:I1->O            1   0.704   0.595  Mtridata_byteReceived<6>_mux0000_SW0 (N17)
-     LUT4:I0->O            1   0.704   0.000  Mtridata_byteReceived<6>_mux0000 (Mtridata_byteReceived<6>_mux0000)
-     LDE:D                     0.308          Mtridata_byteReceived<6>
+     IBUF:I->O            12   1.218   1.136  serial_in_IBUF (serial_in_IBUF)
+     LUT4:I0->O            1   0.704   0.499  data_byte_mux0000<7>_SW0 (N3)
+     LUT3:I1->O            1   0.704   0.000  data_byte_mux0000<7> (data_byte_mux0000<7>)
+     FDE:D                     0.308          data_byte_7
     ----------------------------------------
-    Total                      5.900ns (3.638ns logic, 2.262ns route)
-                                       (61.7% logic, 38.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'current_s_FSM_FFd9'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              2.408ns (Levels of Logic = 1)
-  Source:            serial_in (PAD)
-  Destination:       Mtridata_byteReceived<0> (LATCH)
-  Destination Clock: current_s_FSM_FFd9 falling
-
-  Data Path: serial_in to Mtridata_byteReceived<0>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            10   1.218   0.882  serial_in_IBUF (serial_in_IBUF)
-     LD:D                      0.308          Mtridata_byteReceived<0>
-    ----------------------------------------
-    Total                      2.408ns (1.526ns logic, 0.882ns route)
-                                       (63.4% logic, 36.6% route)
+    Total                      4.569ns (2.934ns logic, 1.635ns route)
+                                       (64.2% logic, 35.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'baudClk'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              4.745ns (Levels of Logic = 1)
+Offset:              4.450ns (Levels of Logic = 1)
   Source:            current_s_FSM_FFd1 (FF)
   Destination:       data_ready (PAD)
   Source Clock:      baudClk rising
@@ -534,42 +450,24 @@ Offset:              4.745ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            10   0.591   0.882  current_s_FSM_FFd1 (current_s_FSM_FFd1)
+     FDCE:C->Q             4   0.591   0.587  current_s_FSM_FFd1 (current_s_FSM_FFd1)
      OBUF:I->O                 3.272          data_ready_OBUF (data_ready)
     ----------------------------------------
-    Total                      4.745ns (3.863ns logic, 0.882ns route)
-                                       (81.4% logic, 18.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'current_s_FSM_FFd1'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              4.368ns (Levels of Logic = 1)
-  Source:            data_byte_7 (LATCH)
-  Destination:       data_byte<7> (PAD)
-  Source Clock:      current_s_FSM_FFd1 falling
-
-  Data Path: data_byte_7 to data_byte<7>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.676   0.420  data_byte_7 (data_byte_7)
-     OBUF:I->O                 3.272          data_byte_7_OBUF (data_byte<7>)
-    ----------------------------------------
-    Total                      4.368ns (3.948ns logic, 0.420ns route)
-                                       (90.4% logic, 9.6% route)
+    Total                      4.450ns (3.863ns logic, 0.587ns route)
+                                       (86.8% logic, 13.2% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.32 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.59 secs
  
 --> 
 
-Total memory usage is 258164 kilobytes
+
+Total memory usage is 164420 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   19 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 
