@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/laraujo/work/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.wdb 
+Running: /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.wdb 
 ISim O.87xd (signature 0x8ddf5b5d)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -8,13 +8,13 @@ This is a Lite version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
-# run 1000 us
+# run 1000 ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 
 ** Failure:NONE. End of simulation.
 User(VHDL) Code Called Simulation Stop
-In process testSerial_receiver.vhd:stim_proc 
+In process testUart_wishbone_slave.vhd:stim_proc 
  
 INFO: Simulator is stopped.
 # exit 0

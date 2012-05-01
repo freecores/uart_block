@@ -39,7 +39,7 @@ begin
 				wait_clk_cycles := wait_clk_cycles + conv_std_logic_vector(1, nBitsLarge); 
 				-- If we're at half of the cycle
 				if wait_clk_cycles = half_cycle then
-					genTick <= '0';
+					genTick <= '0'; 
 				end if;				
 			end if;
 			

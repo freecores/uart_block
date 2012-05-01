@@ -33,7 +33,7 @@ signal controlStates : uartControl;
 signal sigDivRst : std_logic;
 signal sigDivDone : std_logic;
 signal sigDivQuotient : std_logic_vector((nBitsLarge-1) downto 0);
-signal sigDivReminder : std_logic_vector((nBitsLarge-1) downto 0);
+--signal sigDivReminder : std_logic_vector((nBitsLarge-1) downto 0);
 signal sigDivNumerator : std_logic_vector((nBitsLarge-1) downto 0);
 signal sigDivDividend : std_logic_vector((nBitsLarge-1) downto 0);
 
@@ -54,7 +54,7 @@ begin
 		rst => sigDivRst,
 		clk => clk,
 		quotient => sigDivQuotient,
-		reminder => sigDivReminder,
+		reminder => open,	-- Indicates that this port will not be connected to anything
 		numerator => sigDivNumerator,
 		divident => sigDivDividend,
 		done => sigDivDone
@@ -84,7 +84,7 @@ begin
 	end process;
 	
 	-- Process that populate the uart control registers
-	process (rst, clk, reg_addr,WE)
+	process (rst, clk, reg_addr,WE,start)
 	begin 
 		if rst = '1' then
 			config_clk <= (others => '0');
