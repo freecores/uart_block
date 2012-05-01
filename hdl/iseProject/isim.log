@@ -17,3 +17,116 @@ User(VHDL) Code Called Simulation Stop
 In process testUart_wishbone_slave.vhd:stim_proc 
  
 INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 0 fs : File "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" Line 30
+# run all
+Stopped at time : 24706500 ps : File "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" Line 35
+# run all
+Stopped at time : 25249500 ps : File "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" Line 35
+# run all
+Stopped at time : 25792500 ps : File "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" Line 35
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 87 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" Line 35
+# run all
+Stopped at time : 1821 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd" Line 46
+# run all
+Stopped at time : 8765 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd" Line 87
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 87 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" Line 35
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 870 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd" Line 35
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 9627710 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd" Line 60
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 87690 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave.vhd" Line 125
+# run all
+Stopped at time : 96330 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 91
+# run all
+Stopped at time : 105010 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 96
+# run all
+Stopped at time : 113690 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 101
+# run all
+Stopped at time : 122370 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 106
+# run all
+Stopped at time : 131050 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 111
+# run all
+Stopped at time : 139730 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 116
+# run all
+Stopped at time : 148410 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 121
+# run all
+Stopped at time : 157090 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 126
+# run all
+Stopped at time : 165770 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd" Line 132
+# run all
+Stopped at time : 9633330 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave.vhd" Line 71
+# exit 0

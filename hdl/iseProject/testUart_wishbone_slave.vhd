@@ -45,7 +45,7 @@ ARCHITECTURE behavior OF testUart_wishbone_slave IS
    signal serial_out : std_logic;
 
    -- Clock period definitions (1.8432MHz)
-   constant CLK_I_period : time := 0.543 us; -- 0.543us (1.8432Mhz) 2ns (50Mhz)
+   constant CLK_I_period : time := 20 ns; -- 0.543us (1.8432Mhz) 2ns (50Mhz)
  
 BEGIN
  
@@ -78,9 +78,9 @@ BEGIN
    begin		
       -- Reset the slave
 		RST_I <= '1';
-      wait for 1 ns;	
+      wait for CLK_I_period;
 		RST_I <= '0';
-		wait for CLK_I_period*3;
+		wait for CLK_I_period;
 
       -- Configure the clock... 
 		ADR_I0 <= "00";
@@ -114,7 +114,12 @@ BEGIN
 		STB_I <= '0';
 		ADR_I0 <= (others => 'U');
 		wait for CLK_I_period;
-				
+		
+		-- Ask to send some data...(0xC4)
+		ADR_I0 <= "11";
+		WE_I <= '1';
+		STB_I <= '1';
+
 		-- Receive data...
 		-- Receive 0x55 value (01010101)
 		serial_in <= '0'; -- Start bit
@@ -140,6 +145,11 @@ BEGIN
 		-- Stop bit here
 		serial_in <= '1';
 		wait for CLK_I_period*20;
+		
+		wait until ACK_O = '1';
+		WE_I <= '0';
+		STB_I <= '0';		
+		wait for CLK_I_period;						
 
       -- Stop Simulation
 		assert false report "NONE. End of simulation." severity failure;

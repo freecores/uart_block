@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -o /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe -prj /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_beh.prj work.testUart_wishbone_slave 
+Running: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe" -prj "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_beh.prj" "work.testUart_wishbone_slave" 
 ISim O.87xd (signature 0x8ddf5b5d)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -16,7 +16,7 @@ Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbon
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 37476 KB
-Fuse CPU Usage: 1100 ms
+Fuse CPU Usage: 1110 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -32,9 +32,9 @@ Compiling architecture behavioral of entity uart_communication_blocks [uart_comm
 Compiling architecture behavioral of entity uart_wishbone_slave [uart_wishbone_slave_default]
 Compiling architecture behavior of entity testuart_wishbone_slave
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 21 VHDL Units
 Built simulation executable /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe
-Fuse Memory Usage: 90148 KB
-Fuse CPU Usage: 1280 ms
-GCC CPU Usage: 4350 ms
+Fuse Memory Usage: 89256 KB
+Fuse CPU Usage: 1270 ms
+GCC CPU Usage: 150 ms
