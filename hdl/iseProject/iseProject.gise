@@ -51,7 +51,6 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="serial_receiver.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="serial_receiver.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="serial_receiver.ngc"/>
@@ -131,7 +130,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335878101" xil_pn:in_ck="-3791285954837163877" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1335878101">
+    <transform xil_pn:end_ts="1335878953" xil_pn:in_ck="-3791285954837163877" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1335878953">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="baud_generator.vhd"/>
@@ -150,11 +149,11 @@
       <outfile xil_pn:name="uart_control.vhd"/>
       <outfile xil_pn:name="uart_wishbone_slave.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1335877111" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5308805702929486166" xil_pn:start_ts="1335877111">
+    <transform xil_pn:end_ts="1335878937" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5308805702929486166" xil_pn:start_ts="1335878937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335877111" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1238851900205137108" xil_pn:start_ts="1335877111">
+    <transform xil_pn:end_ts="1335878937" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1238851900205137108" xil_pn:start_ts="1335878937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -162,7 +161,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1335878101" xil_pn:in_ck="-3791285954837163877" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1335878101">
+    <transform xil_pn:end_ts="1335878953" xil_pn:in_ck="-3791285954837163877" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1335878953">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="baud_generator.vhd"/>
@@ -181,23 +180,19 @@
       <outfile xil_pn:name="uart_control.vhd"/>
       <outfile xil_pn:name="uart_wishbone_slave.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1335878103" xil_pn:in_ck="-3791285954837163877" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8691405173963172662" xil_pn:start_ts="1335878101">
+    <transform xil_pn:end_ts="1335878957" xil_pn:in_ck="-3791285954837163877" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8691405173963172662" xil_pn:start_ts="1335878953">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="testUart_wishbone_slave_beh.prj"/>
       <outfile xil_pn:name="testUart_wishbone_slave_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1335878103" xil_pn:in_ck="-5691276081812346650" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="7109246390254422178" xil_pn:start_ts="1335878103">
+    <transform xil_pn:end_ts="1335878957" xil_pn:in_ck="-5691276081812346650" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="7109246390254422178" xil_pn:start_ts="1335878957">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="testUart_wishbone_slave_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1335863867" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1335863867">

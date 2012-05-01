@@ -32,9 +32,9 @@ Compiling architecture behavioral of entity uart_communication_blocks [uart_comm
 Compiling architecture behavioral of entity uart_wishbone_slave [uart_wishbone_slave_default]
 Compiling architecture behavior of entity testuart_wishbone_slave
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
+Waiting for 5 sub-compilation(s) to finish...
 Compiled 21 VHDL Units
 Built simulation executable /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe
-Fuse Memory Usage: 90276 KB
+Fuse Memory Usage: 90148 KB
 Fuse CPU Usage: 1280 ms
-GCC CPU Usage: 670 ms
+GCC CPU Usage: 4350 ms

@@ -17,4 +17,3 @@ User(VHDL) Code Called Simulation Stop
 In process testUart_wishbone_slave.vhd:stim_proc 
  
 INFO: Simulator is stopped.
-# exit 0

@@ -114,6 +114,32 @@ BEGIN
 		STB_I <= '0';
 		ADR_I0 <= (others => 'U');
 		wait for CLK_I_period;
+				
+		-- Receive data...
+		-- Receive 0x55 value (01010101)
+		serial_in <= '0'; -- Start bit
+		wait for 8.68 us;
+		
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		serial_in <= '1';
+      wait for 8.68 us;
+		serial_in <= '0';
+      wait for 8.68 us;
+		
+		-- Stop bit here
+		serial_in <= '1';
+		wait for CLK_I_period*20;
 
       -- Stop Simulation
 		assert false report "NONE. End of simulation." severity failure;
