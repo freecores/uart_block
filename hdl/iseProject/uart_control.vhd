@@ -26,7 +26,7 @@ end uart_control;
 architecture Behavioral of uart_control is
 signal config_clk : std_logic_vector((nBitsLarge-1) downto 0);
 signal config_baud : std_logic_vector((nBitsLarge-1) downto 0);
-signal byte_to_receive : std_logic_vector((nBits-1) downto 0);
+--signal byte_to_receive : std_logic_vector((nBits-1) downto 0);
 signal byte_to_transmitt : std_logic_vector((nBits-1) downto 0);
 signal controlStates : uartControl;
 
@@ -61,9 +61,11 @@ begin
 	);
 	
 	-- Process that read uart control registers
-	process (rst, clk, reg_addr,WE)
+	process (rst, reg_addr, WE, start, byte_to_transmitt, data_byte_rx, rx_data_ready, config_clk, config_baud)
 	begin
-		if rising_edge(clk) then
+		if rst = '1' then
+			DAT_O <= (others => 'Z');
+		else
 			if (WE = '0') and (start = '1') then
 				case reg_addr is
 					when "00" =>
@@ -75,12 +77,19 @@ begin
 						DAT_O <= "000000000000000000000000" & byte_to_transmitt;						
 					when "11" =>
 						-- Byte that will be received
-						DAT_O <= "000000000000000000000000" & byte_to_receive;
+						if rx_data_ready = '1' then
+							DAT_O <= "000000000000000000000000" & data_byte_rx;
+							--DAT_O <= "000000000000000000000000" & byte_to_receive;
+						else
+							DAT_O <= (others => 'Z');
+						end if;
 					when others =>
-						null;
-				end case;						
-			end if;
-		end if;
+						DAT_O <= (others => 'Z');
+				end case;
+			else
+				DAT_O <= (others => 'Z');
+			end if;			
+		end if;		
 	end process;
 	
 	-- Process that populate the uart control registers
@@ -108,7 +117,7 @@ begin
 	end process;
 	
 	-- Process to handle the next state logic
-	process (rst, clk, reg_addr, WE)
+	process (rst, clk, reg_addr, WE, start)
 	variable baud_configured : std_logic;
 	variable clk_configured : std_logic;
 	variable div_result_baud_wait : std_logic_vector ((nBitsLarge-1) downto 0);
@@ -122,6 +131,7 @@ begin
 			sigDivRst <= '1';
 			rst_comm_blocks <= '1';
 			tx_start <= '0';
+			--byte_to_receive <= (others => 'Z');
 		elsif rising_edge(clk) then
 			case controlStates is				
 				when idle =>
@@ -192,8 +202,7 @@ begin
 					
 					if (WE = '0') and (start = '1') then
 						if reg_addr = "11" then
-							controlStates <= rx_state_wait;
-							done <= '0';
+							controlStates <= rx_state_wait;							
 						end if;
 					end if;
 					
@@ -211,13 +220,18 @@ begin
 				
 				-- Receive data and wait to receive
 				when rx_state_wait =>
-					if rx_data_ready = '1' then
-						byte_to_receive <= data_byte_rx;
-						done <= '1';
-						controlStates <= rx_tx_state;
+					if rx_data_ready = '1' then						
+						-- Put an ack on the next cycle
+						controlStates <= rx_state_ack;
 					else
 						controlStates <= rx_state_wait;
+						done <= '0';
 					end if;
+				
+				-- Ack that we got a value
+				when rx_state_ack =>
+					done <= '1';
+					controlStates <= rx_tx_state;
 			end case;		
 		end if;
 	end process;

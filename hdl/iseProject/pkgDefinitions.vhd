@@ -26,7 +26,7 @@ type rxStates is (bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7, rx_stop, rx_id
 type rxFilterStates is (s0, s1, s2, s3);
 
 type uartControl is (idle, config_state_clk, config_state_baud, start_division, wait_division, config_state_baud_generator, 
-	rx_tx_state, tx_state_wait, rx_state_wait);
+	rx_tx_state, tx_state_wait, rx_state_wait, rx_state_ack);
 
 end pkgDefinitions;
 
