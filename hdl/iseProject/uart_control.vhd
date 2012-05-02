@@ -1,6 +1,8 @@
 --! uart control unit
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
 
 --! Use CPU Definitions package
 use work.pkgDefinitions.all;
@@ -26,16 +28,23 @@ end uart_control;
 architecture Behavioral of uart_control is
 signal config_clk : std_logic_vector((nBitsLarge-1) downto 0);
 signal config_baud : std_logic_vector((nBitsLarge-1) downto 0);
---signal byte_to_receive : std_logic_vector((nBits-1) downto 0);
-signal byte_to_transmitt : std_logic_vector((nBits-1) downto 0);
-signal controlStates : uartControl;
+signal received_byte : std_logic_vector((nBits-1) downto 0);
+signal byte_to_transmit : std_logic_vector((nBits-1) downto 0);
 
 signal sigDivRst : std_logic;
 signal sigDivDone : std_logic;
 signal sigDivQuotient : std_logic_vector((nBitsLarge-1) downto 0);
---signal sigDivReminder : std_logic_vector((nBitsLarge-1) downto 0);
 signal sigDivNumerator : std_logic_vector((nBitsLarge-1) downto 0);
 signal sigDivDividend : std_logic_vector((nBitsLarge-1) downto 0);
+
+-- Signals used to control the configuration
+signal startConfigBaud : std_logic;
+signal startConfigClk : std_logic;
+signal startDataSend : std_logic;
+signal commBlocksInitiated : std_logic;
+signal finishedDataSend : std_logic;
+signal doneWriteReg : std_logic;
+signal startReadReg : std_logic;
 
 -- Divisor component
 component divisor is
@@ -60,191 +69,193 @@ begin
 		done => sigDivDone
 	);
 	
-	-- Process that read uart control registers
-	process (rst, reg_addr, WE, start, byte_to_transmitt, data_byte_rx, rx_data_ready, config_clk, config_baud)
+	-- Process to handle the of writting the registers
+	process (clk)
 	begin
-		if rst = '1' then
-			DAT_O <= (others => 'Z');
-		else
-			if (WE = '0') and (start = '1') then
+		-- On the wishbone specification we should handle the reset synchronously
+		if rising_edge(clk) then
+			if rst = '1' then
+				config_clk <= (others => '0');
+				config_baud <= (others => '0');
+				byte_to_transmit <= (others => '0');
+				startConfigBaud <= '0';
+				startConfigClk <= '0';
+				startDataSend <= '0';	
+				doneWriteReg <= '0';
+			elsif (WE and start) = '1'	then				
 				case reg_addr is
 					when "00" =>
-						DAT_O <= config_clk;
-					when "01" =>
-						DAT_O <= config_baud;						
-					when "10" =>
-						-- Byte that will be transmitted
-						DAT_O <= "000000000000000000000000" & byte_to_transmitt;						
-					when "11" =>
-						-- Byte that will be received
-						if rx_data_ready = '1' then
-							DAT_O <= "000000000000000000000000" & data_byte_rx;
-							--DAT_O <= "000000000000000000000000" & byte_to_receive;
-						else
-							DAT_O <= (others => 'Z');
-						end if;
-					when others =>
-						DAT_O <= (others => 'Z');
-				end case;
-			else
-				DAT_O <= (others => 'Z');
-			end if;			
-		end if;		
-	end process;
-	
-	-- Process that populate the uart control registers
-	process (rst, clk, reg_addr,WE,start)
-	begin 
-		if rst = '1' then
-			config_clk <= (others => '0');
-			config_baud <= (others => '0');
-			byte_to_transmitt <= (others => '0');			
-		elsif rising_edge(clk) then
-			if (WE = '1') and (start = '1') then
-				case reg_addr is
-					when "00" =>
-						config_clk <= DAT_I;
+						config_clk <= DAT_I;						
+						startConfigClk <= '1';
+						startDataSend <= '0';
+						startConfigBaud <= '0';
 					when "01" =>
 						config_baud <= DAT_I;
+						startConfigBaud <= '1';						
+						startDataSend <= '0';
+						startConfigClk <= '0';
 					when "10" =>
-						-- Byte that will be transmitted
-						byte_to_transmitt <= DAT_I((nBits-1) downto 0);
+						-- If we have an overrun, discard the byte
+						if finishedDataSend = '1' then
+							byte_to_transmit <= DAT_I((nBits-1) downto 0);
+						else
+							byte_to_transmit <= byte_to_transmit;
+						end if;						
+						startConfigBaud <= '0';
+						startConfigClk <= '0';
+						startDataSend <= '1';
 					when others =>
-						null;
-				end case;						
+						startConfigBaud <= '0';
+						startConfigClk <= '0';
+						startDataSend <= '0';
+				end case;
 			end if;
 		end if;
 	end process;
 	
-	-- Process to handle the next state logic
-	process (rst, clk, reg_addr, WE, start)
-	variable baud_configured : std_logic;
-	variable clk_configured : std_logic;
-	variable div_result_baud_wait : std_logic_vector ((nBitsLarge-1) downto 0);
+	-- Process to handle the reading of registers
+	process (clk)
 	begin
-		if rst = '1' then
-			controlStates <= idle;
-			baud_configured := '0';
-			clk_configured := '0';
-			div_result_baud_wait := (others => '0');
-			done <= '0';
-			sigDivRst <= '1';
-			rst_comm_blocks <= '1';
+		-- On the wishbone specification we should handle the reset synchronously
+		if rising_edge(clk) then
+			if rst = '1' then
+				DAT_O <= (others => 'Z');
+				startReadReg <= '0';
+			elsif ((WE = '0') and (start = '1')) then
+				startReadReg <= '1';
+				case reg_addr is
+					when "00" =>
+						DAT_O <= config_clk;
+					when "01" =>						
+						DAT_O <= config_baud;
+					when "10" =>						
+						DAT_O <= conv_std_logic_vector(0, (nBitsLarge-nBits)) & byte_to_transmit;
+					when "11" =>
+						DAT_O <= conv_std_logic_vector(0, (nBitsLarge-nBits)) & received_byte;
+					when others =>
+						null;
+				end case;			
+			end if;
+		end if;
+	end process;
+	
+	-- Process that stores the data that comes from the serial receiver block
+	process (rx_data_ready)
+	begin
+		if rising_edge(rx_data_ready) then
+			received_byte <= data_byte_rx;
+		else
+			received_byte <= received_byte;
+		end if;
+	end process;
+	
+	-- Process to send data over the serial transmitter
+	process (startDataSend, commBlocksInitiated, clk)
+	variable cont_steps : integer range 0 to 3;
+	begin
+		if (startDataSend = '0' and commBlocksInitiated = '0') then
+			data_byte_tx <= (others => '0');
 			tx_start <= '0';
-			--byte_to_receive <= (others => 'Z');
+			finishedDataSend <= '1';
 		elsif rising_edge(clk) then
-			case controlStates is				
-				when idle =>
-					done <= '0';
-					-- Go to config state
-					if (reg_addr = "00") and (WE = '1') then
-						controlStates <= config_state_clk;
-						clk_configured := '1';						
-					elsif (reg_addr = "01") and (WE = '1') then
-						controlStates <= config_state_baud;						
-						baud_configured := '1';
-					end if;
-				
-				when config_state_clk =>
-					sigDivRst <= '1';
-					sigDivNumerator <= config_clk;					
-					if baud_configured = '0' then
-						-- Baud not configured yet so wait for it...
-						controlStates <= idle;
-						done <= '1';
-					else
-						-- If already configured wait for division completion...
-						controlStates <= start_division;
-					end if;
-					
-				when config_state_baud =>
-					sigDivRst <= '1';
-					sigDivDividend <= config_baud;					
-					if clk_configured = '0' then
-						-- Clock not configured yet so wait for it...
-						controlStates <= idle;
-						done <= '1';
-					else
-						-- If already configured wait for division completion...
-						controlStates <= start_division;
-					end if;
-				
-				when start_division =>
-					sigDivRst <= '0';
-					controlStates <= wait_division;
-				
-				when wait_division =>
-					if sigDivDone = '0' then
-						controlStates <= wait_division;
-					else
-						-- Division done, get the result to put on the wait_cycles signal of the baud generator
-						div_result_baud_wait := sigDivQuotient;
-						controlStates <= config_state_baud_generator;
-					end if;
-				
-				when config_state_baud_generator =>
-					-- Configure the wait_cycle for the desired baud rate...
-					baud_wait <= div_result_baud_wait;
-					controlStates <= rx_tx_state;
-					done <= '1';
-				
-				-- Control the serial_receiver or serial_transmitter block
-				when rx_tx_state =>															
-					rst_comm_blocks <= '0';
-					tx_start <= '0';				
-					controlStates <= rx_tx_state;
-					if (WE = '1') and (start = '1') then
-						if reg_addr = "10" then
-							controlStates <= tx_state_wait;
-							done <= '0';
-						end if;												
-					end if;
-					
-					if (WE = '0') and (start = '1') then
-						case reg_addr is
-							when "11" =>
-								controlStates <= rx_state_wait;
-							
-							when "10" =>
-								done <= '1';
-								controlStates <= rx_tx_state;
-							
-							when others =>
-								null;
-						end case;						
-					end if;
-					
-					if (start = '0') then
-						done <= '0';
-					end if;
-					
-					
-				-- Send data and wait to transmit
-				when tx_state_wait =>
+			if cont_steps < 3 then
+				cont_steps := cont_steps + 1;
+			else
+				cont_steps := 3;
+			end if;
+			
+			case cont_steps is
+				when 1 =>
+					data_byte_tx <= byte_to_transmit;
+					tx_start <= '0';
+				when 2 =>
 					tx_start <= '1';
-					data_byte_tx <= byte_to_transmitt;
-					if tx_data_sent = '0' then
-						controlStates <= tx_state_wait;
-					else
-						controlStates <= rx_tx_state;
-						done <= '1';
-					end if;
-				
-				-- Receive data and wait to receive
-				when rx_state_wait =>
-					if rx_data_ready = '1' then						
-						-- Put an ack on the next cycle
-						controlStates <= rx_state_ack;
-					else
-						controlStates <= rx_state_wait;
-						done <= '0';
-					end if;
-				
-				-- Ack that we got a value
-				when rx_state_ack =>
+				when others =>
+					null;
+			end case;
+			
+			if tx_data_sent = '1' then
+				finishedDataSend <= '1';
+			else
+				finishedDataSend <= '0';
+			end if;
+			
+		end if;
+	end process;
+	
+	-- Process to send the ACK signal, remember that optimally this ACK should be as fast as possible
+	-- to avoid locking the bus, on this case if you send a more bytes then you can transmit the ideal
+	-- is to create an error flag to indicate overrun.
+	-- On this case on any attempt of reading or writting on registers we will be lock on 1 cycle
+	process (clk, rst, startConfigBaud, startConfigClk, startDataSend, startReadReg )	
+	variable joinSignal : std_logic_vector(3 downto 0);
+	variable cont_steps : integer range 0 to 3;
+	begin		
+		if rising_edge(clk) then
+			if rst = '1' then
+				done <= '1';
+				cont_steps := 0;
+			else
+				joinSignal := startConfigBaud & startConfigClk & startDataSend & startReadReg;
+				if (joinSignal = "0000") then
 					done <= '1';
-					controlStates <= rx_tx_state;
-			end case;		
+				else										
+					case cont_steps is 
+						when 0 =>
+							if start = '1' then
+								done <= '0';
+							end if;													
+						when others =>
+							done <= '1';
+					end case;
+					
+					if cont_steps < 2 then
+						cont_steps := cont_steps + 1;
+					else
+						cont_steps := 0;
+					end if;
+				end if;				
+			end if;
+		end if;				
+	end process;
+	
+	-- Process to calculate the amount of cycles to wait (clock_speed / desired_baud), and initiate the board
+	process (startConfigBaud,startConfigClk, clk)
+	variable cont_steps : integer range 0 to 3;
+	begin
+		if (startConfigBaud and startConfigClk) = '0' then
+			sigDivRst <= '1';
+			cont_steps := 0;
+			baud_wait <= (others => '0');
+			commBlocksInitiated <= '0';
+		elsif rising_edge(clk) then
+			if cont_steps < 3 then
+				cont_steps := cont_steps + 1;
+			else
+				cont_steps := 3;
+			end if;
+			
+			case cont_steps is
+				when 1 =>
+					sigDivNumerator <= config_clk;
+					sigDivDividend <= config_baud;
+					sigDivRst <= '1';				
+				when 2 =>
+					sigDivRst <= '0';
+				when others =>
+					null;
+			end case;
+			
+			-- Enable the communication block when the baud is calculated
+			if sigDivDone = '1' then
+				rst_comm_blocks <= '0';
+				baud_wait <= sigDivQuotient;
+				commBlocksInitiated <= '1';
+			else
+				baud_wait <= (others => '0');
+				rst_comm_blocks <= '1';
+				commBlocksInitiated <= '0';
+			end if;
 		end if;
 	end process;
 

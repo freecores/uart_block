@@ -90,9 +90,10 @@ BEGIN
    stim_proc: process
    begin		
       rst <= '1';
-      wait for 1 ns;	
+		start <= '0';
+      wait for clk_period;
 		rst <= '0';
-      wait for clk_period*3;
+      wait for clk_period;
 
       -- Configure the clock... 
 		reg_addr <= "00";
@@ -122,7 +123,19 @@ BEGIN
 		WE <= '1';
 		start <= '1';
 		DAT_I <= x"00000055";		
-		wait for clk_period*10;	-- No point to use wait until because we're not connected to the comm block yet
+		wait until done = '1';
+		WE <= '0';
+		start <= '0';
+		reg_addr <= (others => 'U');
+		wait for clk_period;
+		
+		-- Ask to read some data...
+		reg_addr <= "11";
+		WE <= '0';
+		start <= '1';
+		wait until done = '1';
+		start <= '0';
+		wait for clk_period*10;
 
       -- Stop Simulation
 		assert false report "NONE. End of simulation." severity failure;

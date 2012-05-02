@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/laraujo/work/uart_block/hdl/iseProject/testUart_control_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/laraujo/work/uart_block/hdl/iseProject/testUart_control_isim_beh.wdb 
+Running: /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.wdb 
 ISim O.87xd (signature 0x8ddf5b5d)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,10 +11,13 @@ Time resolution is 1 ps
 # run 1000 ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 
 ** Failure:NONE. End of simulation.
 User(VHDL) Code Called Simulation Stop
-In process testUart_control.vhd:stim_proc 
+In process testUart_wishbone_slave.vhd:stim_proc 
  
 INFO: Simulator is stopped.
 # exit 0
