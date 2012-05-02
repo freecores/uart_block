@@ -42,9 +42,10 @@ signal startConfigBaud : std_logic;
 signal startConfigClk : std_logic;
 signal startDataSend : std_logic;
 signal commBlocksInitiated : std_logic;
-signal finishedDataSend : std_logic;
 signal doneWriteReg : std_logic;
 signal startReadReg : std_logic;
+signal alreadyConfBaud : std_logic;
+signal alreadyConfClk : std_logic;
 
 -- Divisor component
 component divisor is
@@ -82,6 +83,8 @@ begin
 				startConfigClk <= '0';
 				startDataSend <= '0';	
 				doneWriteReg <= '0';
+				alreadyConfClk <= '0';
+				alreadyConfBaud <= '0';
 			elsif (WE and start) = '1'	then				
 				case reg_addr is
 					when "00" =>
@@ -89,18 +92,16 @@ begin
 						startConfigClk <= '1';
 						startDataSend <= '0';
 						startConfigBaud <= '0';
+						alreadyConfClk <= '1';
 					when "01" =>
 						config_baud <= DAT_I;
 						startConfigBaud <= '1';						
 						startDataSend <= '0';
 						startConfigClk <= '0';
+						alreadyConfBaud <= '1';
 					when "10" =>
 						-- If we have an overrun, discard the byte
-						if finishedDataSend = '1' then
-							byte_to_transmit <= DAT_I((nBits-1) downto 0);
-						else
-							byte_to_transmit <= byte_to_transmit;
-						end if;						
+						byte_to_transmit <= DAT_I((nBits-1) downto 0);						
 						startConfigBaud <= '0';
 						startConfigClk <= '0';
 						startDataSend <= '1';
@@ -150,36 +151,30 @@ begin
 	end process;
 	
 	-- Process to send data over the serial transmitter
-	process (startDataSend, commBlocksInitiated, clk)
+	process (clk)
 	variable cont_steps : integer range 0 to 3;
 	begin
-		if (startDataSend = '0' and commBlocksInitiated = '0') then
-			data_byte_tx <= (others => '0');
-			tx_start <= '0';
-			finishedDataSend <= '1';
-		elsif rising_edge(clk) then
-			if cont_steps < 3 then
-				cont_steps := cont_steps + 1;
-			else
-				cont_steps := 3;
+		if rising_edge(clk) then
+			if (rst = '1') then
+				cont_steps := 0;
+			else								
+				if commBlocksInitiated = '1' and startDataSend = '1' then
+					case cont_steps is
+						when 0 =>
+							data_byte_tx <= byte_to_transmit;
+							tx_start <= '0';
+						when 1 =>
+							tx_start <= '1';
+						when others =>
+							null;
+					end case;									
+					if cont_steps < 3 then
+						cont_steps := cont_steps + 1;
+					else
+						cont_steps := 3;
+					end if;
+				end if;				
 			end if;
-			
-			case cont_steps is
-				when 1 =>
-					data_byte_tx <= byte_to_transmit;
-					tx_start <= '0';
-				when 2 =>
-					tx_start <= '1';
-				when others =>
-					null;
-			end case;
-			
-			if tx_data_sent = '1' then
-				finishedDataSend <= '1';
-			else
-				finishedDataSend <= '0';
-			end if;
-			
 		end if;
 	end process;
 	
@@ -223,7 +218,7 @@ begin
 	process (startConfigBaud,startConfigClk, clk)
 	variable cont_steps : integer range 0 to 3;
 	begin
-		if (startConfigBaud and startConfigClk) = '0' then
+		if (alreadyConfClk and alreadyConfBaud) = '0' then
 			sigDivRst <= '1';
 			cont_steps := 0;
 			baud_wait <= (others => '0');

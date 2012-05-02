@@ -115,7 +115,9 @@ BEGIN
 		WE <= '0';
 		start <= '0';
 		reg_addr <= (others => 'U');
-		wait for clk_period;
+		
+		-- Wait some time to configure the communication block
+		wait for clk_period * 40;	
 		
 		
 		-- Ask to send some data...(0x55)

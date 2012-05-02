@@ -20,4 +20,428 @@ User(VHDL) Code Called Simulation Stop
 In process testUart_wishbone_slave.vhd:stim_proc 
  
 INFO: Simulator is stopped.
-# exit 0
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 950 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave.vhd" Line 116
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 950 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave.vhd" Line 116
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 950 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 105
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 186
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 950 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 104
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 950 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 105
+# run all
+Stopped at time : 970 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 105
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+# run all
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 850 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 870 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 890 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 910 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 930 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 950 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 970 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 990 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 1010 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 1030 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+# run all
+Stopped at time : 1050 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 161
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+# run all
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+# run all
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 910 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+# run all
+Stopped at time : 990 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+# run all
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Stopped at time : 0 fs : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 157
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Stopped at time : 0 fs : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 157
+# run all
+Finished circuit initialization process.
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 157
+# run all
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 10 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 157
+# run all
+Stopped at time : 30 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 169
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 30 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 163
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 30 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 163
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 850 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 164
+# run all
+Stopped at time : 930 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 164
+# run all
+Stopped at time : 1010 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 164
+# run all
+Stopped at time : 1090 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 164
+# run all
+Stopped at time : 1170 ns : File "/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd" Line 164
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0x8ddf5b5d)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testUart_wishbone_slave.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
