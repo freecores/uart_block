@@ -42,7 +42,6 @@ signal startConfigBaud : std_logic;
 signal startConfigClk : std_logic;
 signal startDataSend : std_logic;
 signal commBlocksInitiated : std_logic;
-signal doneWriteReg : std_logic;
 signal startReadReg : std_logic;
 signal alreadyConfBaud : std_logic;
 signal alreadyConfClk : std_logic;
@@ -81,8 +80,7 @@ begin
 				byte_to_transmit <= (others => '0');
 				startConfigBaud <= '0';
 				startConfigClk <= '0';
-				startDataSend <= '0';	
-				doneWriteReg <= '0';
+				startDataSend <= '0';					
 				alreadyConfClk <= '0';
 				alreadyConfBaud <= '0';
 			elsif (WE and start) = '1'	then				
@@ -100,8 +98,7 @@ begin
 						startConfigClk <= '0';
 						alreadyConfBaud <= '1';
 					when "10" =>
-						-- If we have an overrun, discard the byte
-						byte_to_transmit <= DAT_I((nBits-1) downto 0);						
+						byte_to_transmit <= DAT_I((nBits-1) downto 0);
 						startConfigBaud <= '0';
 						startConfigClk <= '0';
 						startDataSend <= '1';
@@ -110,6 +107,8 @@ begin
 						startConfigClk <= '0';
 						startDataSend <= '0';
 				end case;
+			else
+				startDataSend <= '0';
 			end if;
 		end if;
 	end process;
@@ -151,29 +150,33 @@ begin
 	end process;
 	
 	-- Process to send data over the serial transmitter
-	process (clk)
-	variable cont_steps : integer range 0 to 3;
+	process (clk)	
+	variable sendDataStates : sendByte;
 	begin
 		if rising_edge(clk) then
 			if (rst = '1') then
-				cont_steps := 0;
+				sendDataStates := idle;
 			else								
-				if commBlocksInitiated = '1' and startDataSend = '1' then
-					case cont_steps is
-						when 0 =>
-							data_byte_tx <= byte_to_transmit;
-							tx_start <= '0';
-						when 1 =>
-							tx_start <= '1';
-						when others =>
-							null;
-					end case;									
-					if cont_steps < 3 then
-						cont_steps := cont_steps + 1;
-					else
-						cont_steps := 3;
-					end if;
-				end if;				
+				case sendDataStates is
+					when idle =>
+						if commBlocksInitiated = '1' and startDataSend = '1' then
+							sendDataStates := prepare_byte;
+						end if;
+					
+					when prepare_byte =>
+						data_byte_tx <= byte_to_transmit;						
+						tx_start <= '0';
+						sendDataStates := start_sending;
+					
+					when start_sending =>
+						tx_start <= '1';
+						sendDataStates := wait_completion;
+					
+					when wait_completion =>
+						if tx_data_sent = '1' then
+							sendDataStates := idle;
+						end if;
+				end case;								
 			end if;
 		end if;
 	end process;
@@ -215,7 +218,7 @@ begin
 	end process;
 	
 	-- Process to calculate the amount of cycles to wait (clock_speed / desired_baud), and initiate the board
-	process (startConfigBaud,startConfigClk, clk)
+	process (alreadyConfClk,alreadyConfBaud, clk)
 	variable cont_steps : integer range 0 to 3;
 	begin
 		if (alreadyConfClk and alreadyConfBaud) = '0' then

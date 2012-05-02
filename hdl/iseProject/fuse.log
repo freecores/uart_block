@@ -15,8 +15,8 @@ Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_sl
 Parsing VHDL file "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 37476 KB
-Fuse CPU Usage: 1090 ms
+Fuse Memory Usage: 37472 KB
+Fuse CPU Usage: 1110 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -35,6 +35,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 21 VHDL Units
 Built simulation executable /home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe
-Fuse Memory Usage: 89272 KB
-Fuse CPU Usage: 1260 ms
-GCC CPU Usage: 260 ms
+Fuse Memory Usage: 90296 KB
+Fuse CPU Usage: 1280 ms
+GCC CPU Usage: 230 ms

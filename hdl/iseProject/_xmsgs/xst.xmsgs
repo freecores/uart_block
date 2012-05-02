@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reminder</arg>&apos; of component &apos;<arg fmt="%s" index="4">divisor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reminder</arg>&apos; of component &apos;<arg fmt="%s" index="4">divisor</arg>&apos;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">uDiv/reminder_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart_control</arg>&gt;.

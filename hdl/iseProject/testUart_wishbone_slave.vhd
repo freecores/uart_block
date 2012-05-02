@@ -144,6 +144,26 @@ BEGIN
 		serial_in <= '1';		
 		wait for CLK_I_period*5000;
 		
+		-- Check content by reading the register (Should be 0x55)
+		ADR_I0 <= "11";
+		WE_I <= '0';
+		STB_I <= '1';		
+		wait until ACK_O = '1';
+		STB_I <= '0';		
+		ADR_I0 <= (others => 'U');
+		wait for CLK_I_period*5000;
+		
+		-- Ask to send some data...(0x55)
+		ADR_I0 <= "10";
+		WE_I <= '1';
+		STB_I <= '1';
+		DAT_I0 <= x"00000055";		
+		wait until ACK_O = '1';
+		WE_I <= '0';
+		STB_I <= '0';
+		ADR_I0 <= (others => 'U');
+		wait for CLK_I_period*5000;
+		
 		
 
       -- Stop Simulation
