@@ -53,7 +53,7 @@ ARCHITECTURE behavior OF testUart_control IS
    signal data_byte_tx : std_logic_vector((nBits-1) downto 0);
 
    -- Clock period definitions
-   constant clk_period : time := 2 ns; -- 2ns (50Mhz)
+   constant clk_period : time := 20 ns; -- 20ns (50Mhz)
  
 BEGIN
  

@@ -15,6 +15,7 @@ entity uart_wishbone_slave is
            STB_I : in  STD_LOGIC;
            ACK_O : out  STD_LOGIC;
 			  serial_in : in std_logic;
+			  data_Avaible : out std_logic;											-- Indicate that the receiver module got something
 			  serial_out : out std_logic
 			  );
 end uart_wishbone_slave;
@@ -34,7 +35,7 @@ component uart_control is
 			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	-- 1 Byte to be received by serial_receiver
            tx_data_sent : in  std_logic;										  	-- Signal comming from serial_transmitter
 			  tx_start : out std_logic;												-- Signal to start sending serial data...
-			  rst_comm_blocks : out std_logic;										-- Reset Communication blocks
+			  rst_comm_blocks : out std_logic;										-- Reset Communication blocks			  
            rx_data_ready : in  std_logic);			
 end component;
 
@@ -90,6 +91,8 @@ begin
 		serial_in => serial_in,
 		start_tx => tx_start
 	);
+	
+	data_Avaible <= rx_data_ready;
 
 end Behavioral;
 

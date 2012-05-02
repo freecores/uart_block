@@ -25,6 +25,7 @@ ARCHITECTURE behavior OF testUart_wishbone_slave IS
          STB_I : IN  std_logic;
          ACK_O : OUT  std_logic;
          serial_in : IN  std_logic;
+			data_Avaible : out std_logic;											-- Indicate that the receiver module got something
          serial_out : OUT  std_logic
         );
     END COMPONENT;
@@ -43,6 +44,7 @@ ARCHITECTURE behavior OF testUart_wishbone_slave IS
    signal DAT_O0 : std_logic_vector(31 downto 0);
    signal ACK_O : std_logic;
    signal serial_out : std_logic;
+	signal data_Avaible : std_logic;
 
    -- Clock period definitions (1.8432MHz)
    constant CLK_I_period : time := 20 ns; -- 0.543us (1.8432Mhz) 2ns (50Mhz)
@@ -60,6 +62,7 @@ BEGIN
           STB_I => STB_I,
           ACK_O => ACK_O,
           serial_in => serial_in,
+			 data_Avaible => data_Avaible,
           serial_out => serial_out
         );
 
