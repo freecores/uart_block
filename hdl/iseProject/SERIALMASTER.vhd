@@ -34,6 +34,7 @@ begin
 	
 	process (CLK_I)
 	variable contWait : integer range 0 to 50000000;
+	variable cycles2Wait : integer range 0 to 50000000;
 	variable nextState: testMaster;
 	begin
 		if rising_edge(CLK_I) then
@@ -41,7 +42,8 @@ begin
 				masterSerialStates <= idle;
 				nextState := idle;
 				contWait := 0;
-				byteIncome <= (others => '0');
+				cycles2Wait := 25000000;
+				byteIncome <= conv_std_logic_vector(64, (nBitsLarge));	--Send the '@';
 			else
 				case masterSerialStates is
 					when idle =>
@@ -81,8 +83,8 @@ begin
 						DAT_O <= conv_std_logic_vector(0, (nBitsLarge-8)) & byteIncome;	--Send the '@'
 						if ACK_I = '1' then
 							-- Byte received wait some cycles to continue
-							masterSerialStates <= wait_cycles;													
-							byte_rec	<= "00000100";
+							masterSerialStates <= wait_cycles;
+							cycles2Wait	:= 7000000;
 						end if;
 					
 					when receive_byte =>
@@ -95,12 +97,12 @@ begin
 							masterSerialStates <= wait_cycles;
 							byte_rec	<= DAT_I(7 downto 0);
 							byteIncome <= DAT_I(7 downto 0);
-							--byte_rec	<= "00001000";							
+							cycles2Wait	:= 7000000;							
 						end if;
 					
 					when wait_cycles =>
 						-- wait some cycles (90)
-						if contWait < 25000000 then
+						if contWait < cycles2Wait then
 							contWait := contWait + 1;
 							STB_O <= '0';
 						else
