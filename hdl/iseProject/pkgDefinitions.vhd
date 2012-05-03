@@ -27,6 +27,8 @@ type rxFilterStates is (s0, s1, s2, s3);
 
 type sendByte is (idle, prepare_byte, start_sending, wait_completion);
 
+type testMaster is (idle, config_clock, config_baud, send_byte, receive_byte, wait_cycles);
+
 end pkgDefinitions;
 
 package body pkgDefinitions is
