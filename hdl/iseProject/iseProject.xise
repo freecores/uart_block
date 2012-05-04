@@ -104,6 +104,9 @@
     <file xil_pn:name="pins_spartan3EStarterKit.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
+    <file xil_pn:name="debugChip.cdc" xil_pn:type="FILE_CDC">
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
   </files>
 
   <properties>
@@ -412,6 +415,7 @@
 
   <bindings>
     <binding xil_pn:location="/INTERCON_P2P" xil_pn:name="pins_spartan3EStarterKit.ucf"/>
+    <binding xil_pn:location="/INTERCON_P2P" xil_pn:name="debugChip.cdc"/>
   </bindings>
 
   <libraries/>
