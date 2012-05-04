@@ -5,19 +5,85 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CYC_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/INTERCON_P2P</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">SEL_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/INTERCON_P2P/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">95</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">data_Avaible</arg>&apos; of component &apos;<arg fmt="%s" index="4">uart_wishbone_slave</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SERIALMASTER</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">byteIncome</arg>&gt; has a width of <arg fmt="%d" index="4">8</arg> bits but assigned expression is <arg fmt="%d" index="5">32</arg>-bit wide.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SERIALMASTER/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reminder</arg>&apos; of component &apos;<arg fmt="%s" index="4">divisor</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SYC0001a</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SYC0001a/SYC0001a1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_wishbone_slave</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_wishbone_slave/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_communication_blocks</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_communication_blocks/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_control</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_control/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/baud_generator</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/baud_generator/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/divisor</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/divisor/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_receiver</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_receiver/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_transmitter</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_transmitter/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/pkgDefinitions</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/pkgDefinitions</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CYC_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">SEL_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">95</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">data_Avaible</arg>&apos; of component &apos;<arg fmt="%s" index="4">uart_wishbone_slave</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">byteIncome</arg>&gt; has a width of <arg fmt="%d" index="4">8</arg> bits but assigned expression is <arg fmt="%d" index="5">32</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reminder</arg>&apos; of component &apos;<arg fmt="%s" index="4">divisor</arg>&apos;.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DAT_I&lt;31:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

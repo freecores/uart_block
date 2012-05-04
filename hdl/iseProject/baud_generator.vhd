@@ -61,10 +61,11 @@ begin
 		if rst = '1' then
 			wait_clk_cycles := (others => '0');			
 			
-			-- Divide cycle_wait by 4
+			-- Divide cycle_wait by 8
 			--cycle_wait_oversample := '0' & cycle_wait(cycle_wait'high downto 1);			
 			--cycle_wait_oversample := '0' & cycle_wait_oversample(cycle_wait_oversample'high downto 1);
-			cycle_wait_oversample := "00" & cycle_wait(cycle_wait'high downto 2);	-- Shift right by 2			
+			--cycle_wait_oversample := '0' & cycle_wait_oversample(cycle_wait_oversample'high downto 1);
+			cycle_wait_oversample := "000" & cycle_wait(cycle_wait'high downto 3);	-- Shift right by 3			
 			
 			
 			-- Half of cycle_wait_oversample
@@ -86,7 +87,7 @@ begin
 
 			-- Avoid creation of transparent latch (By default the VHDL will create an register for vectors that are assigned only in one
 			-- ocasion of a (if, case) instruction
-			cycle_wait_oversample := "00" & cycle_wait(cycle_wait'high downto 2);			
+			cycle_wait_oversample := "000" & cycle_wait(cycle_wait'high downto 3);			
 			half_cycle := '0' & cycle_wait_oversample(cycle_wait_oversample'high downto 1);
 		end if;
 	end process;

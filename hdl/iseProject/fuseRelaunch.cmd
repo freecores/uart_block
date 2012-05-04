@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.exe" -prj "/home/laraujo/work/uart_block/hdl/iseProject/testUart_wishbone_slave_beh.prj" "work.testUart_wishbone_slave" 
+-intstyle "ise" -incremental -o "/home/laraujo/work/uart_block/hdl/iseProject/testUart_communication_block_isim_beh.exe" -prj "/home/laraujo/work/uart_block/hdl/iseProject/testUart_communication_block_beh.prj" "testUart_communication_block" 

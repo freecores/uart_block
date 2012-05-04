@@ -43,7 +43,7 @@ ARCHITECTURE behavior OF testUart_communication_block IS
    signal serial_out : std_logic;
 
    -- Clock period definitions   
-	constant clk_period : time := 0.543 us; -- 0.543us (1.8432Mhz) 2ns (50Mhz)
+	constant clk_period : time := 20 ns; -- 0.543us (1.8432Mhz) 20ns (50Mhz)
  
 BEGIN
  
@@ -77,7 +77,7 @@ BEGIN
       -- Setup communication blocks
 		rst <= '1';
 		serial_in <= '1'; -- Idle..
-		cycle_wait_baud <= conv_std_logic_vector(16, (nBitsLarge));
+		cycle_wait_baud <= conv_std_logic_vector(434, (nBitsLarge));
 		start_tx <= '0';
       wait for 2 ns;	
 		rst <= '0';
@@ -123,7 +123,7 @@ BEGIN
 		
 		-- Stop bit here
 		serial_in <= '1';
-		wait for clk_period*20;
+		wait for clk_period*200;
 		
 		-- Receive 0xC4 value (11000100)
 		serial_in <= '0'; -- Start bit
@@ -148,7 +148,7 @@ BEGIN
 		
 		-- Stop bit here
 		serial_in <= '1';
-		wait for clk_period*20;
+		wait for clk_period*200;
 		
 				
 

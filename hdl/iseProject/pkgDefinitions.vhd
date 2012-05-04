@@ -23,7 +23,7 @@ constant nBitsLarge : integer := 32;
 
 type txStates is (tx_idle, tx_start, bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7, tx_stop1, tx_stop2);
 type rxStates is (bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7, rx_stop, rx_idle);
-type rxFilterStates is (s0, s1, s2, s3);
+type rxFilterStates is (s0, s1, s2, s3, s4);
 
 type sendByte is (idle, prepare_byte, start_sending, wait_completion);
 
