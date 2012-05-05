@@ -5,85 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/INTERCON_P2P</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CYC_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/INTERCON_P2P/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">SEL_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SERIALMASTER</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">95</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">data_Avaible</arg>&apos; of component &apos;<arg fmt="%s" index="4">uart_wishbone_slave</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SERIALMASTER/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">byteIncome</arg>&gt; has a width of <arg fmt="%d" index="4">8</arg> bits but assigned expression is <arg fmt="%d" index="5">32</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SYC0001a</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SYC0001a/SYC0001a1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/SYC0001a.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_wishbone_slave</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_wishbone_slave/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_wishbone_slave.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_communication_blocks</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_communication_blocks/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_communication_blocks.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_control</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/uart_control/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/baud_generator</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/baud_generator/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/baud_generator.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/divisor</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/divisor/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/divisor.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_receiver</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_receiver/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_receiver.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_transmitter</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/serial_transmitter/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/serial_transmitter.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/pkgDefinitions</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/pkgDefinitions</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">E:/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/laraujo/work/uart_block/hdl/iseProject/pkgDefinitions.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CYC_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">SEL_O</arg>&apos; of component &apos;<arg fmt="%s" index="4">SERIALMASTER</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/INTERCON_P2P.vhd</arg>&quot; line <arg fmt="%d" index="2">95</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">data_Avaible</arg>&apos; of component &apos;<arg fmt="%s" index="4">uart_wishbone_slave</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/SERIALMASTER.vhd</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">byteIncome</arg>&gt; has a width of <arg fmt="%d" index="4">8</arg> bits but assigned expression is <arg fmt="%d" index="5">32</arg>-bit wide.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">/home/laraujo/work/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reminder</arg>&apos; of component &apos;<arg fmt="%s" index="4">divisor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/uart_block/hdl/iseProject/uart_control.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">reminder</arg>&apos; of component &apos;<arg fmt="%s" index="4">divisor</arg>&apos;.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DAT_I&lt;31:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -95,100 +29,103 @@
 <msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">SEL_O</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">baudClk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">getPoint</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">data_avaible</arg>&gt; is never assigned.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_25&gt; &lt;half_cycle0_23&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_25&gt; &lt;half_cycle0_22&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_8&gt; &lt;half_cycle0_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_16&gt; &lt;half_cycle0_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_20&gt; &lt;half_cycle0_18&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_12&gt; &lt;half_cycle0_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_21&gt; &lt;half_cycle0_19&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_3&gt; &lt;half_cycle0_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_16&gt; &lt;half_cycle0_14&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_6&gt; &lt;half_cycle0_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_30&gt; &lt;half_cycle0_27&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_30&gt; &lt;half_cycle0_28&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_26&gt; &lt;half_cycle0_23&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_4&gt; &lt;half_cycle0_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_21&gt; &lt;half_cycle0_18&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_28&gt; &lt;half_cycle0_26&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_24&gt; &lt;half_cycle0_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_24&gt; &lt;half_cycle0_22&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_15&gt; &lt;half_cycle0_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_9&gt; &lt;half_cycle0_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_6&gt; &lt;half_cycle0_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_29&gt; &lt;half_cycle0_26&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_19&gt; &lt;half_cycle0_17&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_4&gt; &lt;half_cycle0_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_15&gt; &lt;half_cycle0_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cycle_wait_oversample_31&gt; &lt;cycle_wait_oversample_30&gt; &lt;half_cycle_31&gt; &lt;half_cycle0_31&gt; &lt;half_cycle0_30&gt; &lt;half_cycle0_29&gt; &lt;half_cycle0_28&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_29&gt; &lt;half_cycle0_27&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_20&gt; &lt;half_cycle0_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_27&gt; &lt;half_cycle0_25&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_10&gt; &lt;half_cycle0_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_2&gt; &lt;half_cycle0_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_7&gt; &lt;half_cycle0_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_23&gt; &lt;half_cycle0_21&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_23&gt; &lt;half_cycle0_20&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_18&gt; &lt;half_cycle0_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_18&gt; &lt;half_cycle0_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cycle_wait_oversample_30&gt; &lt;half_cycle_31&gt; &lt;half_cycle0_31&gt; &lt;half_cycle0_30&gt; &lt;half_cycle0_29&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_14&gt; &lt;half_cycle0_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_14&gt; &lt;half_cycle0_12&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_28&gt; &lt;half_cycle0_25&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_10&gt; &lt;half_cycle0_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_9&gt; &lt;half_cycle0_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_7&gt; &lt;half_cycle0_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_19&gt; &lt;half_cycle0_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_12&gt; &lt;half_cycle0_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_22&gt; &lt;half_cycle0_19&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_26&gt; &lt;half_cycle0_24&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_17&gt; &lt;half_cycle0_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_22&gt; &lt;half_cycle0_20&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_5&gt; &lt;half_cycle0_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_17&gt; &lt;half_cycle0_15&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_11&gt; &lt;half_cycle0_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_3&gt; &lt;half_cycle0_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_13&gt; &lt;half_cycle0_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_13&gt; &lt;half_cycle0_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_8&gt; &lt;half_cycle0_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_11&gt; &lt;half_cycle0_9&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_5&gt; &lt;half_cycle0_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">uBaudGen</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_27&gt; &lt;half_cycle0_24&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">N_24</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">uDiv</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -272,7 +209,7 @@
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">config_baud_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">uUartControl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">uBaudGen</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">uBaudGen</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">DAT_O_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">uMasterSerial</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -458,7 +395,10 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">DAT_O_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SERIALMASTER</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">baud_generator</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">baud_generator</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">baud_generator</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">baud_generator</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -476,94 +416,94 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">half_cycle0_29</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">baud_generator</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_25&gt; &lt;half_cycle0_23&gt; </arg>
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">half_cycle0_28</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">baud_generator</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_8&gt; &lt;half_cycle0_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_25&gt; &lt;half_cycle0_22&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_20&gt; &lt;half_cycle0_18&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_16&gt; &lt;half_cycle0_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_21&gt; &lt;half_cycle0_19&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_12&gt; &lt;half_cycle0_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_16&gt; &lt;half_cycle0_14&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_3&gt; &lt;half_cycle0_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_6&gt; &lt;half_cycle0_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_30&gt; &lt;half_cycle0_28&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_30&gt; &lt;half_cycle0_27&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_4&gt; &lt;half_cycle0_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_26&gt; &lt;half_cycle0_23&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_28&gt; &lt;half_cycle0_26&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_21&gt; &lt;half_cycle0_18&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_24&gt; &lt;half_cycle0_22&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_24&gt; &lt;half_cycle0_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_9&gt; &lt;half_cycle0_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_15&gt; &lt;half_cycle0_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_6&gt; &lt;half_cycle0_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_19&gt; &lt;half_cycle0_17&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_29&gt; &lt;half_cycle0_26&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_15&gt; &lt;half_cycle0_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_4&gt; &lt;half_cycle0_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_29&gt; &lt;half_cycle0_27&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_20&gt; &lt;half_cycle0_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_27&gt; &lt;half_cycle0_25&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_10&gt; &lt;half_cycle0_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_2&gt; &lt;half_cycle0_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_7&gt; &lt;half_cycle0_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_23&gt; &lt;half_cycle0_21&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_23&gt; &lt;half_cycle0_20&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_18&gt; &lt;half_cycle0_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_18&gt; &lt;half_cycle0_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_14&gt; &lt;half_cycle0_12&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_14&gt; &lt;half_cycle0_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_10&gt; &lt;half_cycle0_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_28&gt; &lt;half_cycle0_25&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_7&gt; &lt;half_cycle0_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_9&gt; &lt;half_cycle0_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_12&gt; &lt;half_cycle0_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_19&gt; &lt;half_cycle0_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_26&gt; &lt;half_cycle0_24&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_22&gt; &lt;half_cycle0_19&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_22&gt; &lt;half_cycle0_20&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_17&gt; &lt;half_cycle0_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_17&gt; &lt;half_cycle0_15&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_5&gt; &lt;half_cycle0_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_3&gt; &lt;half_cycle0_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_11&gt; &lt;half_cycle0_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_13&gt; &lt;half_cycle0_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_13&gt; &lt;half_cycle0_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_11&gt; &lt;half_cycle0_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_8&gt; &lt;half_cycle0_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_5&gt; &lt;half_cycle0_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cycle_wait_oversample_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">baud_generator</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;half_cycle_27&gt; &lt;half_cycle0_24&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">cycles2Wait_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SERIALMASTER</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -597,6 +537,15 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2042" delta="old" >Unit <arg fmt="%s" index="1">uart_control</arg>: <arg fmt="%d" index="2">32</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">waitBestPoint_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">serial_receiver</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">waitBestPoint_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">serial_receiver</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">waitBestPoint_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">serial_receiver</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">uUartWishboneSlave/uUartControl/Mtridata_DAT_O_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">INTERCON_P2P</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>

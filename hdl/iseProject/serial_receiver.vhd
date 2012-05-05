@@ -20,7 +20,7 @@ architecture Behavioral of serial_receiver is
 signal current_s: rxStates; 
 signal filterRx : rxFilterStates; 
 signal syncDetected : std_logic;
---signal getPoint : std_logic;
+signal getPoint : std_logic;
 
 begin
 	-- First we need to oversample(4x baud rate) out serial channel to syncronize with the PC
@@ -98,104 +98,104 @@ begin
 			data_ready <= '0';
 			byteReceived := (others => '0');
 			waitBestPoint := 0;
-			--getPoint <= '0';
+			getPoint <= '0';
 		elsif rising_edge(baudOverSampleClk) then
 			case current_s is				
 				when bit0 =>
 					data_ready <= '0';				
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(0) := serial_in;					
 						current_s <=  bit1;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;										
 
 				when bit1 =>
 					data_ready <= '0';
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(1) := serial_in;					
 						current_s <=  bit2;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;					
 
 				when bit2 =>
 					data_ready <= '0';
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(2) := serial_in;					
 						current_s <=  bit3;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;					
 
 				when bit3 =>
 					data_ready <= '0';
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(3) := serial_in;					
 						current_s <=  bit4;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;					
 
 				when bit4 =>
 					data_ready <= '0';
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(4) := serial_in;					
 						current_s <=  bit5;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;					
 
 				when bit5 =>
 					data_ready <= '0';
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(5) := serial_in;					
 						current_s <=  bit6;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;					
 
 				when bit6 =>
 					data_ready <= '0';
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(6) := serial_in;					
 						current_s <=  bit7;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;										
 					
 				when bit7 =>
 					data_ready <= '0';
 					if (waitBestPoint < numTicks) then
 						waitBestPoint := waitBestPoint + 1;
-						--getPoint <= '0';
+						getPoint <= '0';
 					else
 						waitBestPoint := 0;
 						byteReceived(7) := serial_in;					
 						data_byte <= byteReceived;
 						current_s <=  rx_stop;
-						--getPoint <= '1';
+						getPoint <= '1';
 					end if;									
 
 				when rx_stop =>
