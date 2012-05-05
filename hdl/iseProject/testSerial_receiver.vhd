@@ -15,7 +15,6 @@ ARCHITECTURE behavior OF testSerial_receiver IS
     COMPONENT serial_receiver
     PORT(
          rst : IN  std_logic;
-         baudClk : IN  std_logic;
          baudOverSampleClk : IN  std_logic;
          serial_in : IN  std_logic;
          data_ready : OUT  std_logic;
@@ -36,14 +35,13 @@ ARCHITECTURE behavior OF testSerial_receiver IS
 
    -- Clock period definitions
    constant baudClk_period : time := 8.6805 us;
-   constant baudOverSampleClk_period : time := 1 us;
+   constant baudOverSampleClk_period : time :=1.085 us;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: serial_receiver PORT MAP (
-          rst => rst,
-          baudClk => baudClk,
+          rst => rst,          
           baudOverSampleClk => baudOverSampleClk,
           serial_in => serial_in,
           data_ready => data_ready,

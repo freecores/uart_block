@@ -39,8 +39,7 @@ end component;
 
 component serial_receiver is
     Port ( 
-			  rst : in STD_LOGIC;
-			  baudClk : in  STD_LOGIC;
+			  rst : in STD_LOGIC;			  
 			  baudOverSampleClk : in  STD_LOGIC;
            serial_in : in  STD_LOGIC;
            data_ready : out  STD_LOGIC;
@@ -69,8 +68,7 @@ begin
 	
 	-- Instantiate serial_receiver
 	uReceiver : serial_receiver port map(
-		rst => rst,
-		baudClk => baud_tick,
+		rst => rst,		
 		baudOverSampleClk => baud_tick_oversample,
 		serial_in => serial_in,
 		data_ready => data_received_rx,
