@@ -14,27 +14,25 @@ ARCHITECTURE behavior OF testDivisor IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT divisor
-    PORT(
-         rst : IN  std_logic;
-         clk : IN  std_logic;
-         quotient : OUT  std_logic_vector((nBitsLarge-1) downto 0);
-         reminder : OUT  std_logic_vector((nBitsLarge-1) downto 0);
-         numerator : IN  std_logic_vector((nBitsLarge-1) downto 0);
-         divident : IN  std_logic_vector((nBitsLarge-1) downto 0);
-         done : OUT  std_logic
-        );
+    Port ( rst : in  STD_LOGIC;														--! Reset input
+           clk : in  STD_LOGIC;			  											--! Clock input
+           quotient : out  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	--! Division result (32 bits)
+			  reminder : out  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	--! Reminder result (32 bits)
+           numerator : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	--! Numerator (32 bits)
+           divident : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	--! "Divide by" number (32 bits)
+           done : out  STD_LOGIC);
     END COMPONENT;
     
 
    --Inputs
-   signal rst : std_logic := '0';
-   signal clk : std_logic := '0';
-   signal numerator : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');
-   signal divident : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');
+   signal rst : std_logic := '0';																	--! Signal to connect with UUT
+   signal clk : std_logic := '0';																	--! Signal to connect with UUT
+   signal numerator : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');	--! Signal to connect with UUT
+   signal divident : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');	--! Signal to connect with UUT
 
  	--Outputs
-   signal quotient : std_logic_vector((nBitsLarge-1) downto 0);
-   signal reminder : std_logic_vector((nBitsLarge-1) downto 0);
+   signal quotient : std_logic_vector((nBitsLarge-1) downto 0);							--! Signal to connect with UUT
+   signal reminder : std_logic_vector((nBitsLarge-1) downto 0);							--! Signal to connect with UUT
    signal done : std_logic;
 
    -- Clock period definitions

@@ -1,4 +1,5 @@
---! Top level for interconnection between communication blocks: serial_transmitter, serial_receiver, baud_generator
+--! @file
+--! @brief Top level for interconnection between communication blocks: serial_transmitter, serial_receiver, baud_generator
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -18,32 +19,34 @@ entity uart_communication_blocks is
            start_tx : in  STD_LOGIC);													--! Initiate transmission
 end uart_communication_blocks;
 
+--! @brief Top level for interconnection between communication blocks: serial_transmitter, serial_receiver, baud_generator
+--! @details Declare used components for instantiation
 architecture Behavioral of uart_communication_blocks is
 
 -- Declare components...
 component baud_generator is
-    Port ( rst : in STD_LOGIC;
-			  clk : in  STD_LOGIC;
-           cycle_wait : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
-			  baud_oversample : out std_logic;
-           baud : out  STD_LOGIC);
+    Port ( rst : in STD_LOGIC;														--! Reset Input
+			  clk : in  STD_LOGIC;														--! Clock input
+           cycle_wait : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	--! Number of cycles to wait for baud generation
+			  baud_oversample : out std_logic;										--! Oversample(8x) version of baud (Used on serial_receiver)
+           baud : out  STD_LOGIC);													--! Baud generation output (Used on serial_transmitter)
 end component;
 
 component serial_transmitter is
-    Port ( rst : in  STD_LOGIC;
-           baudClk : in  STD_LOGIC;
-           data_byte : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);
-			  data_sent : out STD_LOGIC;
-           serial_out : out  STD_LOGIC);
+     Port ( rst : in  STD_LOGIC;												--! Reset input
+           baudClk : in  STD_LOGIC;											--! Baud rate clock input
+           data_byte : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);	--! Byte to be sent
+			  data_sent : out STD_LOGIC;										--! Indicate that byte has been sent
+           serial_out : out  STD_LOGIC);									--! Uart serial output
 end component;
 
 component serial_receiver is
     Port ( 
-			  rst : in STD_LOGIC;			  
-			  baudOverSampleClk : in  STD_LOGIC;
-           serial_in : in  STD_LOGIC;
-           data_ready : out  STD_LOGIC;
-           data_byte : out  STD_LOGIC_VECTOR ((nBits-1) downto 0));
+			  rst : in STD_LOGIC;													--! Reset input		  
+			  baudOverSampleClk : in  STD_LOGIC;								--! Baud oversampled 8x (Best way to detect start bit)
+           serial_in : in  STD_LOGIC;											--! Uart serial input
+           data_ready : out  STD_LOGIC;										--! Data received and ready to be read
+           data_byte : out  STD_LOGIC_VECTOR ((nBits-1) downto 0));	--! Data byte received
 end component;
 signal baud_tick : std_logic;
 signal baud_tick_oversample : std_logic;

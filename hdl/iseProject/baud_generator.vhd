@@ -1,5 +1,5 @@
---! Baud generator
---! http://www.fpga4fun.com/SerialInterface.html
+--! @file
+--! @brief Baud generator http://www.fpga4fun.com/SerialInterface.html
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -10,13 +10,15 @@ use ieee.numeric_std.all;
 use work.pkgDefinitions.all;
 
 entity baud_generator is
-    Port ( rst : in STD_LOGIC;
-			  clk : in  STD_LOGIC;
-           cycle_wait : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
-			  baud_oversample : out std_logic;
-           baud : out  STD_LOGIC);
+    Port ( rst : in STD_LOGIC;														--! Reset Input
+			  clk : in  STD_LOGIC;														--! Clock input
+           cycle_wait : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	--! Number of cycles to wait for baud generation
+			  baud_oversample : out std_logic;										--! Oversample(8x) version of baud (Used on serial_receiver)
+           baud : out  STD_LOGIC);													--! Baud generation output (Used on serial_transmitter)
 end baud_generator;
 
+--! @brief Baud generator http://www.fpga4fun.com/SerialInterface.html
+--! @details Implement block that will generate the desired baud (115200, 9600, etc...) from main clock (50Mhz)
 architecture Behavioral of baud_generator is
 signal genTick : std_logic;
 signal genTickOverSample : std_logic;

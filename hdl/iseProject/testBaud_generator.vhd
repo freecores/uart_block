@@ -13,24 +13,22 @@ END testBaud_generator;
 ARCHITECTURE behavior OF testBaud_generator IS 
       
     COMPONENT baud_generator
-    PORT(
-         rst : IN  std_logic;
-         clk : IN  std_logic;
-         cycle_wait : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);
-			baud_oversample : out std_logic;
-         baud : OUT  std_logic
-        );
+    Port ( rst : in STD_LOGIC;														--! Reset Input
+			  clk : in  STD_LOGIC;														--! Clock input
+           cycle_wait : in  STD_LOGIC_VECTOR ((nBitsLarge-1) downto 0);	--! Number of cycles to wait for baud generation
+			  baud_oversample : out std_logic;										--! Oversample(8x) version of baud (Used on serial_receiver)
+           baud : out  STD_LOGIC);													--! Baud generation output (Used on serial_transmitter)
     END COMPONENT;
     
 
    --Inputs
-   signal rst : std_logic := '0';
-   signal clk : std_logic := '0';
-   signal cycle_wait : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');
+   signal rst : std_logic := '0';																		--! Signal to connect with UUT
+   signal clk : std_logic := '0';																		--! Signal to connect with UUT
+   signal cycle_wait : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');	--! Signal to connect with UUT
 
  	--Outputs
-   signal baud : std_logic;
-	signal baud_oversample : std_logic;
+   signal baud : std_logic;					--! Signal to connect with UUT
+	signal baud_oversample : std_logic;		--! Signal to connect with UUT
 
    -- Clock period definitions (1.8432MHz)
    constant clk_period : time := 0.543 us; -- 0.543us (1.8432Mhz) 2ns (50Mhz)

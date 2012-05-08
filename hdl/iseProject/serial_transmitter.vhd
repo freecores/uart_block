@@ -1,5 +1,5 @@
---! Data transmitter
---! http://www.fpga4fun.com/SerialInterface.html
+--! @file
+--! @brief Serial transmitter http://www.fpga4fun.com/SerialInterface.html
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -7,13 +7,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.pkgDefinitions.all;
 
 entity serial_transmitter is
-    Port ( rst : in  STD_LOGIC;
-           baudClk : in  STD_LOGIC;
-           data_byte : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);
-			  data_sent : out STD_LOGIC;
-           serial_out : out  STD_LOGIC);
+    Port ( rst : in  STD_LOGIC;												--! Reset input
+           baudClk : in  STD_LOGIC;											--! Baud rate clock input
+           data_byte : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);	--! Byte to be sent
+			  data_sent : out STD_LOGIC;										--! Indicate that byte has been sent
+           serial_out : out  STD_LOGIC);									--! Uart serial output
 end serial_transmitter;
 
+--! @brief Serial transmitter http://www.fpga4fun.com/SerialInterface.html
+--! @details Implement block that serialize the "data_byte" signal on a stream of bits clocked out by "baudClk"
 architecture Behavioral of serial_transmitter is
 signal current_s,next_s: txStates; 
 begin

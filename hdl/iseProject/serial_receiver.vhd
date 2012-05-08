@@ -1,5 +1,5 @@
---! Data receiver
---! http://www.fpga4fun.com/SerialInterface.html
+--! @file
+--! @brief Serial receiver http://www.fpga4fun.com/SerialInterface.html
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -8,20 +8,22 @@ use work.pkgDefinitions.all;
 
 entity serial_receiver is
     Port ( 
-			  rst : in STD_LOGIC;			  
-			  baudOverSampleClk : in  STD_LOGIC;
-           serial_in : in  STD_LOGIC;
-           data_ready : out  STD_LOGIC;
-           data_byte : out  STD_LOGIC_VECTOR ((nBits-1) downto 0));
+			  rst : in STD_LOGIC;													--! Reset input		  
+			  baudOverSampleClk : in  STD_LOGIC;								--! Baud oversampled 8x (Best way to detect start bit)
+           serial_in : in  STD_LOGIC;											--! Uart serial input
+           data_ready : out  STD_LOGIC;										--! Data received and ready to be read
+           data_byte : out  STD_LOGIC_VECTOR ((nBits-1) downto 0));	--! Data byte received
 end serial_receiver;
 
+--! @brief Serial receiver http://www.fpga4fun.com/SerialInterface.html
+--! @details Implement block that create a byte from the serial stream of data.
 architecture Behavioral of serial_receiver is
 signal current_s: rxStates; 
 signal filterRx : rxFilterStates; 
 signal syncDetected : std_logic;
 
 begin
-	-- First we need to oversample(4x baud rate) out serial channel to syncronize with the PC
+	-- First we need to oversample(8x baud rate) out serial channel to syncronize with the PC (By detecting the start bit)
 	process (rst, baudOverSampleClk, serial_in, current_s)
 	begin
 		if rst = '1' then
@@ -31,11 +33,7 @@ begin
 			case filterRx is
 				when s0 =>
 					syncDetected <= '0';
-					-- Spike down detected, verify if it's valid for at least 3 cycles
-					-- We shoose a little bit on the end to enforce the baud clk to sample 
-					-- the data at the right time... iE we're going to start sampling when
-					-- the stop has been detected and we already for some of the first bit
-					-- signal
+					-- Spike down detected, verify if it's valid for at least 4 cycles					
 					if serial_in = '0' then
 						filterRx <= s1;						
 					else

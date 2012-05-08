@@ -319,12 +319,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1336513199" xil_pn:in_ck="4673194791943474574" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8986552465892320357" xil_pn:start_ts="1336513183">
+    <transform xil_pn:end_ts="1336515643" xil_pn:in_ck="4673194791943474574" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8986552465892320357" xil_pn:start_ts="1336515631">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="INTERCON_P2P.lso"/>
       <outfile xil_pn:name="INTERCON_P2P.ngc"/>
       <outfile xil_pn:name="INTERCON_P2P.ngr"/>
@@ -352,6 +350,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="INTERCON_P2P.bld"/>
       <outfile xil_pn:name="INTERCON_P2P.ngd"/>
       <outfile xil_pn:name="INTERCON_P2P_cs.blc"/>
@@ -364,6 +364,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="INTERCON_P2P.pcf"/>
       <outfile xil_pn:name="INTERCON_P2P_map.map"/>
       <outfile xil_pn:name="INTERCON_P2P_map.mrp"/>
@@ -378,6 +381,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="INTERCON_P2P.ncd"/>
       <outfile xil_pn:name="INTERCON_P2P.pad"/>
       <outfile xil_pn:name="INTERCON_P2P.par"/>
@@ -393,6 +397,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="INTERCON_P2P.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="intercon_p2p.bgn"/>
@@ -406,6 +413,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
     </transform>
@@ -413,6 +421,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
     </transform>
@@ -420,6 +429,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
@@ -427,6 +437,7 @@
     <transform xil_pn:end_ts="1336513241" xil_pn:in_ck="-5119142186248317927" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1336513238">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="INTERCON_P2P.twr"/>
       <outfile xil_pn:name="INTERCON_P2P.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

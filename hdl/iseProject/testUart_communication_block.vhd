@@ -15,32 +15,32 @@ ARCHITECTURE behavior OF testUart_communication_block IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT uart_communication_blocks
-    Port ( rst : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
-			  cycle_wait_baud : in std_logic_vector((nBitsLarge-1) downto 0);
-           byte_tx : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);
-           byte_rx : out  STD_LOGIC_VECTOR ((nBits-1) downto 0);
-           data_sent_tx : out  STD_LOGIC;
-           data_received_rx : out  STD_LOGIC;
-			  serial_out : out std_logic;
-			  serial_in : in std_logic;
-           start_tx : in  STD_LOGIC);
+    Port ( rst : in  STD_LOGIC;															--! Global reset
+           clk : in  STD_LOGIC;															--! Global clock
+			  cycle_wait_baud : in std_logic_vector((nBitsLarge-1) downto 0);	--! Number of cycles to wait in order to generate desired baud
+           byte_tx : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);				--! Byte to transmit
+           byte_rx : out  STD_LOGIC_VECTOR ((nBits-1) downto 0);				--! Byte to receive
+           data_sent_tx : out  STD_LOGIC;												--! Indicate that byte has been sent
+           data_received_rx : out  STD_LOGIC;										--! Indicate that we got a byte
+			  serial_out : out std_logic;													--! Uart serial out
+			  serial_in : in std_logic;													--! Uart serial in
+           start_tx : in  STD_LOGIC);													--! Initiate transmission
     END COMPONENT;
     
 
    --Inputs
-   signal rst : std_logic := '0';
-   signal clk : std_logic := '0';
-   signal cycle_wait_baud : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');
-   signal byte_tx : std_logic_vector((nBits-1) downto 0) := (others => '0');
-   signal serial_in : std_logic := '0';
-   signal start_tx : std_logic := '0';
+   signal rst : std_logic := '0';																			--! Signal to connect with UUT
+   signal clk : std_logic := '0';																			--! Signal to connect with UUT
+   signal cycle_wait_baud : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');	--! Signal to connect with UUT
+   signal byte_tx : std_logic_vector((nBits-1) downto 0) := (others => '0');					--! Signal to connect with UUT
+   signal serial_in : std_logic := '0';																	--! Signal to connect with UUT
+   signal start_tx : std_logic := '0';																		--! Signal to connect with UUT
 
  	--Outputs
-   signal byte_rx : std_logic_vector((nBits-1) downto 0);
-   signal data_sent_tx : std_logic;
-   signal data_received_rx : std_logic;
-   signal serial_out : std_logic;
+   signal byte_rx : std_logic_vector((nBits-1) downto 0);											--! Signal to connect with UUT
+   signal data_sent_tx : std_logic;																			--! Signal to connect with UUT
+   signal data_received_rx : std_logic;																	--! Signal to connect with UUT
+   signal serial_out : std_logic;																			--! Signal to connect with UUT
 
    -- Clock period definitions   
 	constant clk_period : time := 20 ns; -- 0.543us (1.8432Mhz) 20ns (50Mhz)

@@ -13,25 +13,24 @@ ARCHITECTURE behavior OF testSerial_receiver IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT serial_receiver
-    PORT(
-         rst : IN  std_logic;
-         baudOverSampleClk : IN  std_logic;
-         serial_in : IN  std_logic;
-         data_ready : OUT  std_logic;
-         data_byte : OUT  std_logic_vector((nBits-1) downto 0)
-        );
+   Port ( 
+			  rst : in STD_LOGIC;													--! Reset input		  
+			  baudOverSampleClk : in  STD_LOGIC;								--! Baud oversampled 8x (Best way to detect start bit)
+           serial_in : in  STD_LOGIC;											--! Uart serial input
+           data_ready : out  STD_LOGIC;										--! Data received and ready to be read
+           data_byte : out  STD_LOGIC_VECTOR ((nBits-1) downto 0));	--! Data byte received
     END COMPONENT;
     
 
    --Inputs
-   signal rst : std_logic := '0';
-   signal baudClk : std_logic := '0';
-   signal baudOverSampleClk : std_logic := '0';
-   signal serial_in : std_logic := '0';
+   signal rst : std_logic := '0';					--! Signal to connect with UUT
+   signal baudClk : std_logic := '0';				--! Signal to connect with UUT
+   signal baudOverSampleClk : std_logic := '0';	--! Signal to connect with UUT
+   signal serial_in : std_logic := '0';			--! Signal to connect with UUT
 
  	--Outputs
-   signal data_ready : std_logic;
-   signal data_byte : std_logic_vector((nBits-1) downto 0);
+   signal data_ready : std_logic;									--! Signal to connect with UUT
+   signal data_byte : std_logic_vector((nBits-1) downto 0);	--! Signal to connect with UUT
 
    -- Clock period definitions
    constant baudClk_period : time := 8.6805 us;

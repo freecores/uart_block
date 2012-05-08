@@ -15,36 +15,37 @@ ARCHITECTURE behavior OF testUart_wishbone_slave IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT uart_wishbone_slave
-    PORT(
-         RST_I : IN  std_logic;
-         CLK_I : IN  std_logic;
-         ADR_I0 : IN  std_logic_vector(1 downto 0);
-         DAT_I0 : IN  std_logic_vector(31 downto 0);
-         DAT_O0 : OUT  std_logic_vector(31 downto 0);
-         WE_I : IN  std_logic;
-         STB_I : IN  std_logic;
-         ACK_O : OUT  std_logic;
-         serial_in : IN  std_logic;
-			data_Avaible : out std_logic;											-- Indicate that the receiver module got something
-         serial_out : OUT  std_logic
-        );
+    Port ( RST_I : in  STD_LOGIC;								--! Reset Input
+           CLK_I : in  STD_LOGIC;								--! Clock Input
+           ADR_I0 : in  STD_LOGIC_VECTOR (1 downto 0);	--! Address input
+           DAT_I0 : in  STD_LOGIC_VECTOR (31 downto 0);	--! Data Input 0
+           DAT_O0 : out  STD_LOGIC_VECTOR (31 downto 0);	--! Data Output 0
+           WE_I : in  STD_LOGIC;									--! Write enable input
+           STB_I : in  STD_LOGIC;								--! Strobe input (Works like a chip select)
+           ACK_O : out  STD_LOGIC;								--! Ack output
+			  
+			  -- NON-WISHBONE Signals
+			  serial_in : in std_logic;							--! Uart serial input
+			  data_Avaible : out std_logic;						--! Flag to indicate data avaible					
+			  serial_out : out std_logic
+			  );
     END COMPONENT;
     
 
    --Inputs
-   signal RST_I : std_logic := '0';
-   signal CLK_I : std_logic := '0';
-   signal ADR_I0 : std_logic_vector(1 downto 0) := (others => '0');
-   signal DAT_I0 : std_logic_vector(31 downto 0) := (others => '0');
+   signal RST_I : std_logic := '0';												--! Signal to connect with UUT
+   signal CLK_I : std_logic := '0';												--! Signal to connect with UUT
+   signal ADR_I0 : std_logic_vector(1 downto 0) := (others => '0');	--! Signal to connect with UUT
+   signal DAT_I0 : std_logic_vector(31 downto 0) := (others => '0');	--! Signal to connect with UUT
    signal WE_I : std_logic := '0';
    signal STB_I : std_logic := '0';
    signal serial_in : std_logic := '0';
 
  	--Outputs
-   signal DAT_O0 : std_logic_vector(31 downto 0);
-   signal ACK_O : std_logic;
-   signal serial_out : std_logic;
-	signal data_Avaible : std_logic;
+   signal DAT_O0 : std_logic_vector(31 downto 0);							--! Signal to connect with UUT
+   signal ACK_O : std_logic;														--! Signal to connect with UUT
+   signal serial_out : std_logic;												--! Signal to connect with UUT
+	signal data_Avaible : std_logic;												--! Signal to connect with UUT
 
    -- Clock period definitions (1.8432MHz)
    constant CLK_I_period : time := 20 ns; -- 0.543us (1.8432Mhz) 2ns (50Mhz)

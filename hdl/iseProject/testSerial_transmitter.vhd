@@ -13,24 +13,22 @@ ARCHITECTURE behavior OF testSerial_transmitter IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT serial_transmitter
-    PORT(
-         rst : IN  std_logic;
-         baudClk : IN  std_logic;
-         data_byte : IN  std_logic_vector(7 downto 0);
-         data_sent : OUT  std_logic;
-         serial_out : OUT  std_logic
-        );
+    Port ( rst : in  STD_LOGIC;												--! Reset input
+           baudClk : in  STD_LOGIC;											--! Baud rate clock input
+           data_byte : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);	--! Byte to be sent
+			  data_sent : out STD_LOGIC;										--! Indicate that byte has been sent
+           serial_out : out  STD_LOGIC);									--! Uart serial output
     END COMPONENT;
     
 
    --Inputs
-   signal rst : std_logic := '0';
-   signal baudClk : std_logic := '0';
-   signal data_byte : std_logic_vector(7 downto 0) := (others => '0');
+   signal rst : std_logic := '0';													--! Signal to connect with UUT
+   signal baudClk : std_logic := '0';												--! Signal to connect with UUT
+   signal data_byte : std_logic_vector(7 downto 0) := (others => '0');	--! Signal to connect with UUT
 
  	--Outputs
-   signal data_sent : std_logic;
-   signal serial_out : std_logic;
+   signal data_sent : std_logic;														--! Signal to connect with UUT
+   signal serial_out : std_logic;													--! Signal to connect with UUT
 
    -- Clock period definitions
    constant baudClk_period : time := 10 ns;

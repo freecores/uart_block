@@ -15,42 +15,42 @@ ARCHITECTURE behavior OF testUart_control IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT uart_control
-    Port ( rst : in  std_logic;														-- Global reset
-           clk : in  std_logic;														-- Global clock
-			  WE	: in std_logic;														-- Write enable
-           reg_addr : in  std_logic_vector (1 downto 0);			  			-- Register address
-			  start : in std_logic;														-- Start (Strobe)
-			  done : out std_logic;														-- Done (ACK)
-           DAT_I : in  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data Input (Wishbone)
-           DAT_O : out  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data output (Wishbone)
-			  baud_wait : out std_logic_vector ((nBitsLarge-1) downto 0);	-- Signal to control the baud rate frequency
-			  data_byte_tx : out std_logic_vector((nBits-1) downto 0);	  	-- 1 Byte to be send to serial_transmitter
-			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	-- 1 Byte to be received by serial_receiver
-           tx_data_sent : in  std_logic;										  	-- Signal comming from serial_transmitter
-			  tx_start : out std_logic;												-- Signal to start sending serial data...
-			  rst_comm_blocks : out std_logic;										-- Reset Communication blocks
+    Port ( rst : in  std_logic;														--! Global reset
+           clk : in  std_logic;														--! Global clock
+			  WE	: in std_logic;														--! Write enable
+           reg_addr : in  std_logic_vector (1 downto 0);			  			--! Register address
+			  start : in std_logic;														--! Start (Strobe)
+			  done : out std_logic;														--! Done (ACK)
+           DAT_I : in  std_logic_vector ((nBitsLarge-1) downto 0);		--! Data Input (Wishbone)
+           DAT_O : out  std_logic_vector ((nBitsLarge-1) downto 0);		--! Data output (Wishbone)
+			  baud_wait : out std_logic_vector ((nBitsLarge-1) downto 0);	--! Signal to control the baud rate frequency
+			  data_byte_tx : out std_logic_vector((nBits-1) downto 0);	  	--! 1 Byte to be send to serial_transmitter
+			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	--! 1 Byte to be received by serial_receiver
+           tx_data_sent : in  std_logic;										  	--! Signal comming from serial_transmitter
+			  tx_start : out std_logic;												--! Signal to start sending serial data...
+			  rst_comm_blocks : out std_logic;										--! Reset Communication blocks
            rx_data_ready : in  std_logic);			
     END COMPONENT;
     
 
    --Inputs
-   signal rst : std_logic := '0';
-   signal clk : std_logic := '0';
-   signal WE : std_logic := '0';
-   signal reg_addr : std_logic_vector(1 downto 0) := (others => '0');
-   signal start : std_logic := '0';
-   signal DAT_I : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');
-   signal data_byte_rx : std_logic_vector((nBits-1) downto 0) := (others => '0');
-   signal tx_data_sent : std_logic := '0';
-   signal rx_data_ready : std_logic := '0';
+   signal rst : std_logic := '0';																	--! Signal to connect with UUT
+   signal clk : std_logic := '0';																	--! Signal to connect with UUT
+   signal WE : std_logic := '0';																		--! Signal to connect with UUT
+   signal reg_addr : std_logic_vector(1 downto 0) := (others => '0');					--! Signal to connect with UUT
+   signal start : std_logic := '0';																	--! Signal to connect with UUT
+   signal DAT_I : std_logic_vector((nBitsLarge-1) downto 0) := (others => '0');		--! Signal to connect with UUT
+   signal data_byte_rx : std_logic_vector((nBits-1) downto 0) := (others => '0');	--! Signal to connect with UUT
+   signal tx_data_sent : std_logic := '0';														--! Signal to connect with UUT
+   signal rx_data_ready : std_logic := '0';														--! Signal to connect with UUT
 
  	--Outputs
-   signal done : std_logic;
-	signal tx_start : std_logic;
-	signal rst_comm_blocks : std_logic;
-   signal DAT_O : std_logic_vector((nBitsLarge-1) downto 0);
-   signal baud_wait : std_logic_vector((nBitsLarge-1) downto 0);
-   signal data_byte_tx : std_logic_vector((nBits-1) downto 0);
+   signal done : std_logic;																			--! Signal to connect with UUT
+	signal tx_start : std_logic;																		--! Signal to connect with UUT
+	signal rst_comm_blocks : std_logic;																--! Signal to connect with UUT
+   signal DAT_O : std_logic_vector((nBitsLarge-1) downto 0);								--! Signal to connect with UUT
+   signal baud_wait : std_logic_vector((nBitsLarge-1) downto 0);							--! Signal to connect with UUT
+   signal data_byte_tx : std_logic_vector((nBits-1) downto 0);								--! Signal to connect with UUT
 
    -- Clock period definitions
    constant clk_period : time := 20 ns; -- 20ns (50Mhz)
