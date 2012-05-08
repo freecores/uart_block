@@ -47,7 +47,7 @@ ARCHITECTURE behavior OF testUart_communication_block IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+	--! Instantiate the Unit Under Test (UUT)
    uut: uart_communication_blocks PORT MAP (
           rst => rst,
           clk => clk,

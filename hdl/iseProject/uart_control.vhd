@@ -1,4 +1,5 @@
---! uart control unit
+--! @file
+--! @brief Uart control unit
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
@@ -8,23 +9,25 @@ use ieee.std_logic_arith.all;
 use work.pkgDefinitions.all;
 
 entity uart_control is
-    Port ( rst : in  std_logic;														-- Global reset
-           clk : in  std_logic;														-- Global clock
-			  WE	: in std_logic;														-- Write enable
-           reg_addr : in  std_logic_vector (1 downto 0);			  			-- Register address
-			  start : in std_logic;														-- Start (Strobe)
-			  done : out std_logic;														-- Done (ACK)
-           DAT_I : in  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data Input (Wishbone)
-           DAT_O : out  std_logic_vector ((nBitsLarge-1) downto 0);		-- Data output (Wishbone)
-			  baud_wait : out std_logic_vector ((nBitsLarge-1) downto 0);	-- Signal to control the baud rate frequency
-			  data_byte_tx : out std_logic_vector((nBits-1) downto 0);	  	-- 1 Byte to be send to serial_transmitter
-			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	-- 1 Byte to be received by serial_receiver
-           tx_data_sent : in  std_logic;										  	-- Signal comming from serial_transmitter
-			  tx_start : out std_logic;												-- Signal to start sending serial data...
-			  rst_comm_blocks : out std_logic;										-- Reset Communication blocks
-           rx_data_ready : in  std_logic);										-- Signal comming from serial_receiver
+    Port ( rst : in  std_logic;														--! Global reset
+           clk : in  std_logic;														--! Global clock
+			  WE	: in std_logic;														--! Write enable
+           reg_addr : in  std_logic_vector (1 downto 0);			  			--! Register address
+			  start : in std_logic;														--! Start (Strobe)
+			  done : out std_logic;														--! Done (ACK)
+           DAT_I : in  std_logic_vector ((nBitsLarge-1) downto 0);		--! Data Input (Wishbone)
+           DAT_O : out  std_logic_vector ((nBitsLarge-1) downto 0);		--! Data output (Wishbone)
+			  baud_wait : out std_logic_vector ((nBitsLarge-1) downto 0);	--! Signal to control the baud rate frequency
+			  data_byte_tx : out std_logic_vector((nBits-1) downto 0);	  	--! 1 Byte to be send to serial_transmitter
+			  data_byte_rx : in std_logic_vector((nBits-1) downto 0);     	--! 1 Byte to be received by serial_receiver
+           tx_data_sent : in  std_logic;										  	--! Signal comming from serial_transmitter
+			  tx_start : out std_logic;												--! Signal to start sending serial data...
+			  rst_comm_blocks : out std_logic;										--! Reset Communication blocks
+           rx_data_ready : in  std_logic);										--! Signal comming from serial_receiver
 end uart_control;
 
+--! @brief Uart control unit
+--! @details Configure, commands, the uart_communication_blocks
 architecture Behavioral of uart_control is
 signal config_clk : std_logic_vector((nBitsLarge-1) downto 0);
 signal config_baud : std_logic_vector((nBitsLarge-1) downto 0);
@@ -58,7 +61,7 @@ component divisor is
 end component;
 
 begin
-	-- Instantiate block for calculate division
+	--! Instantiate block for calculate division
 	uDiv : divisor port map (
 		rst => sigDivRst,
 		clk => clk,

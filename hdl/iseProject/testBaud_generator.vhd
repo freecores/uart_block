@@ -37,7 +37,7 @@ ARCHITECTURE behavior OF testBaud_generator IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+	--! Instantiate the Unit Under Test (UUT)
    uut: baud_generator PORT MAP (
           rst => rst,
           clk => clk,

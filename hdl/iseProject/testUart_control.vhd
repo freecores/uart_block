@@ -57,7 +57,7 @@ ARCHITECTURE behavior OF testUart_control IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+	--! Instantiate the Unit Under Test (UUT)
    uut: uart_control PORT MAP (
           rst => rst,
           clk => clk,

@@ -39,7 +39,7 @@ ARCHITECTURE behavior OF testSerial_receiver IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+	--! Instantiate the Unit Under Test (UUT)
    uut: serial_receiver PORT MAP (
           rst => rst,          
           baudOverSampleClk => baudOverSampleClk,

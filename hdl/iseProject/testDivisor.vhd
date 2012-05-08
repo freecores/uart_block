@@ -42,7 +42,7 @@ ARCHITECTURE behavior OF testDivisor IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+	--! Instantiate the Unit Under Test (UUT)
    uut: divisor PORT MAP (
           rst => rst,
           clk => clk,

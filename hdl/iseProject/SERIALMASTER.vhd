@@ -1,4 +1,5 @@
---! Top wishbone Master to test the uart_wishbone_slave
+--! @file
+--! @brief Top wishbone Master to test the uart_wishbone_slave
 library ieee;
 USE ieee.std_logic_1164.ALL;
 use ieee.std_logic_unsigned.all;
@@ -10,23 +11,25 @@ use work.pkgDefinitions.all;
 entity SERIALMASTER is
 	port(
             -- WISHBONE Signals
-            ACK_I:  in  std_logic;
-            ADR_O:  out std_logic_vector( 1 downto 0 );
-            CLK_I:  in  std_logic;
-            CYC_O:  out std_logic;
-            DAT_I:  in  std_logic_vector( 31 downto 0 );
-            DAT_O:  out std_logic_vector( 31 downto 0 );
-            RST_I:  in  std_logic;
-            SEL_O:  out std_logic;
-            STB_O:  out std_logic;
-            WE_O:   out std_logic;
+            ACK_I:  in  std_logic;								--! Ack input
+            ADR_O:  out std_logic_vector( 1 downto 0 );	--! Address output
+            CLK_I:  in  std_logic;								--! Clock input
+            CYC_O:  out std_logic;								--! Cycle output
+            DAT_I:  in  std_logic_vector( 31 downto 0 );	--! Data input
+            DAT_O:  out std_logic_vector( 31 downto 0 );	--! Data output
+            RST_I:  in  std_logic;								--! Reset input
+            SEL_O:  out std_logic;								--! Select output
+            STB_O:  out std_logic;								--! Strobe output (Works like a chip select)
+            WE_O:   out std_logic;								--! Write enable
 				
 				-- NON-WISHBONE Signals
-				byte_rec : out std_logic_vector(7 downto 0)
+				byte_rec : out std_logic_vector(7 downto 0)	--! Signal byte received (Used to debug on the out leds)	
          );
 
 end SERIALMASTER;
 
+--! @brief Test the uart_wishbone_slave
+--! @details Configure the core then, send the received data back to the PC
 architecture Behavioral of SERIALMASTER is
 signal masterSerialStates : testMaster;
 signal byteIncome : std_logic_vector(7 downto 0);
@@ -101,7 +104,7 @@ begin
 						end if;
 					
 					when wait_cycles =>
-						-- wait some cycles (90)
+						-- wait some cycles 
 						if contWait < cycles2Wait then
 							contWait := contWait + 1;
 							STB_O <= '0';

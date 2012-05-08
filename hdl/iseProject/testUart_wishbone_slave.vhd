@@ -51,7 +51,7 @@ ARCHITECTURE behavior OF testUart_wishbone_slave IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+	--! Instantiate the Unit Under Test (UUT)
    uut: uart_wishbone_slave PORT MAP (
           RST_I => RST_I,
           CLK_I => CLK_I,

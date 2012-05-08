@@ -6,16 +6,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 use work.pkgDefinitions.all;
 
 entity uart_communication_blocks is
-    Port ( rst : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
-			  cycle_wait_baud : in std_logic_vector((nBitsLarge-1) downto 0);
-           byte_tx : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);
-           byte_rx : out  STD_LOGIC_VECTOR ((nBits-1) downto 0);
-           data_sent_tx : out  STD_LOGIC;
-           data_received_rx : out  STD_LOGIC;
-			  serial_out : out std_logic;
-			  serial_in : in std_logic;
-           start_tx : in  STD_LOGIC);
+    Port ( rst : in  STD_LOGIC;															--! Global reset
+           clk : in  STD_LOGIC;															--! Global clock
+			  cycle_wait_baud : in std_logic_vector((nBitsLarge-1) downto 0);	--! Number of cycles to wait in order to generate desired baud
+           byte_tx : in  STD_LOGIC_VECTOR ((nBits-1) downto 0);				--! Byte to transmit
+           byte_rx : out  STD_LOGIC_VECTOR ((nBits-1) downto 0);				--! Byte to receive
+           data_sent_tx : out  STD_LOGIC;												--! Indicate that byte has been sent
+           data_received_rx : out  STD_LOGIC;										--! Indicate that we got a byte
+			  serial_out : out std_logic;													--! Uart serial out
+			  serial_in : in std_logic;													--! Uart serial in
+           start_tx : in  STD_LOGIC);													--! Initiate transmission
 end uart_communication_blocks;
 
 architecture Behavioral of uart_communication_blocks is
@@ -48,7 +48,7 @@ end component;
 signal baud_tick : std_logic;
 signal baud_tick_oversample : std_logic;
 begin
-	-- Instantiate baud generator
+	--! Instantiate baud generator
 	uBaudGen : baud_generator port map (
 		rst => rst,
 		clk => clk,
@@ -57,7 +57,7 @@ begin
 		baud => baud_tick		
 	);
 	
-	-- Instantiate serial_transmitter
+	--! Instantiate serial_transmitter
 	uTransmitter : serial_transmitter port map (
 		rst => not start_tx,
 		baudClk => baud_tick,
@@ -66,7 +66,7 @@ begin
 		serial_out => serial_out 
 	);
 	
-	-- Instantiate serial_receiver
+	--! Instantiate serial_receiver
 	uReceiver : serial_receiver port map(
 		rst => rst,		
 		baudOverSampleClk => baud_tick_oversample,

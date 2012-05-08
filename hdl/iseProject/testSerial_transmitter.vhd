@@ -37,7 +37,7 @@ ARCHITECTURE behavior OF testSerial_transmitter IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+	--! Instantiate the Unit Under Test (UUT)
    uut: serial_transmitter PORT MAP (
           rst => rst,
           baudClk => baudClk,

@@ -1,3 +1,4 @@
+# Constraint file to point to the right pins on the Spartan3E starter kit
 NET "EXTCLK" LOC = "c9"| IOSTANDARD = LVCMOS33 ;
 
 NET "EXTRST" LOC = "n17"| IOSTANDARD = LVCMOS33 ;
