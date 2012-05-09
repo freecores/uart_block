@@ -1,4 +1,7 @@
---! Test serial_receiver module
+--! @file
+--! @brief Test serial_receiver module module
+
+--! Use standard library and import the packages (std_logic_1164,std_logic_unsigned,std_logic_arith)
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
@@ -8,6 +11,8 @@ use work.pkgDefinitions.all;
 ENTITY testSerial_receiver IS
 END testSerial_receiver;
  
+--! @brief Test serial_receiver module module
+--! @details Receive some simulated byte stream and verify received values
 ARCHITECTURE behavior OF testSerial_receiver IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
@@ -97,7 +102,9 @@ BEGIN
       wait for baudClk_period;
 		
 		-- Stop bit here
-		serial_in <= '1';
+		serial_in <= '1';		
+		---wait until data_ready = '1';
+		assert data_byte = X"C4" report "Wrong result... expected 0xC4" severity failure;
 		wait for baudClk_period * 8;
 		
 		-- Receive 0x55 value (01010101)
@@ -125,6 +132,8 @@ BEGIN
 		-- Stop bit here
 		serial_in <= '1';
 		wait for baudClk_period * 1;
+		---wait until data_ready = '1';
+		assert data_byte = X"55" report "Wrong result... expected 0x55" severity failure;
 
       -- Stop Simulation
 		assert false report "NONE. End of simulation." severity failure;

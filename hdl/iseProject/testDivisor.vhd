@@ -1,4 +1,7 @@
---! Test divisor module
+--! @file
+--! @brief Test divisor module
+
+--! Use standard library and import the packages (std_logic_1164,std_logic_unsigned,std_logic_arith)
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_arith.all;
@@ -9,6 +12,8 @@ use work.pkgDefinitions.all;
 ENTITY testDivisor IS
 END testDivisor;
  
+--! @brief Test divisor module
+--! @details Calculate some divisions and verify if we have the right value
 ARCHITECTURE behavior OF testDivisor IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
@@ -68,19 +73,21 @@ BEGIN
 		rst <= '1';
 		numerator <= conv_std_logic_vector(50000000, 32);
 		divident <= conv_std_logic_vector(115200, 32);
-      wait for 20 ns;	
+      wait for clk_period;	
 		rst <= '0';
 		
 		wait until done = '1';
+		assert quotient = conv_std_logic_vector(434, 32) report "Wrong result... expected 434." severity failure;
       wait for clk_period;
 		
 		rst <= '1';
 		numerator <= conv_std_logic_vector(40, 32);
 		divident <= conv_std_logic_vector(5, 32);
-      wait for 20 ns;	
+      wait for clk_period;
 		rst <= '0';
 		
 		wait until done = '1';
+		assert quotient = conv_std_logic_vector(8, 32) report "Wrong result... expected 8." severity failure;
 		wait for clk_period;
 
       -- insert stimulus here 

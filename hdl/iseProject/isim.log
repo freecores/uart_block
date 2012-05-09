@@ -1,5 +1,5 @@
 ISim log file
-Running: E:\uart_block\hdl\iseProject\testUart_wishbone_slave_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/uart_block/hdl/iseProject/testUart_wishbone_slave_isim_beh.wdb 
+Running: E:\uart_block\hdl\iseProject\testSerial_receiver_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/uart_block/hdl/iseProject/testSerial_receiver_isim_beh.wdb 
 ISim O.87xd (signature 0xc3576ebc)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -13,12 +13,238 @@ Time resolution is 1 ps
 # run 1000 ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartControl/uDiv/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 10 ns(1), Instance /testuart_wishbone_slave/uut/uUartCommunicationBlocks/uBaudGen/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 
 ** Failure:NONE. End of simulation.
 User(VHDL) Code Called Simulation Stop
-In process testUart_wishbone_slave.vhd:stim_proc 
+In process testSerial_receiver.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 106
+# step
+Stopped at time : 107415 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 66
+# step
+Stopped at time : 107415 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 67
+# step
+Stopped at time : 107415 ns : File "E:/uart_block/hdl/iseProject/serial_receiver.vhd" Line 29
+# step
+Stopped at time : 107415 ns : File "E:/uart_block/hdl/iseProject/serial_receiver.vhd" Line 92
+# run all
+Stopped at time : 36220620100 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 66
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 106
+# step
+Stopped at time : 107415 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 66
+# run all
+Stopped at time : 5831395972500 ps : File "E:/uart_block/hdl/iseProject/serial_receiver.vhd" Line 37
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 106
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 108
+# run all
+Stopped at time : 176610 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 112
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+** Failure:Wrong result... expected 0xC4
+User(VHDL) Code Called Simulation Stop
+In process testSerial_receiver.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testSerial_receiver.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+** Failure:Wrong result... expected 0x55
+User(VHDL) Code Called Simulation Stop
+In process testSerial_receiver.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 105
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 105
+# run all
+Stopped at time : 7368665202500 ps : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 68
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 105
+# run all
+Stopped at time : 45201791145 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 66
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 105787500 ps : File "E:/uart_block/hdl/iseProject/serial_receiver.vhd" Line 186
+# run all
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 105
+# run all
+Stopped at time : 12853995542500 ps : File "E:/uart_block/hdl/iseProject/serial_receiver.vhd" Line 33
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 107
+ISim O.87xd (signature 0xc3576ebc)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 107166 ns : File "E:/uart_block/hdl/iseProject/testSerial_receiver.vhd" Line 107
+# run all
+
+** Failure:NONE. End of simulation.
+User(VHDL) Code Called Simulation Stop
+In process testSerial_receiver.vhd:stim_proc 
  
 INFO: Simulator is stopped.

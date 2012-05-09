@@ -146,11 +146,12 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="serial_transmitter_xst.xrpt"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testBaud_generator_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testDivisor_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testSerial_receiver_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testSerial_receiver_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testSerial_receiver_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testSerial_transmitter_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testUart_communication_block_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testUart_control_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testUart_wishbone_slave_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testUart_wishbone_slave_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testUart_wishbone_slave_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="uart_communication_blocks.cmd_log"/>
@@ -202,13 +203,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1336250815" xil_pn:in_ck="8052531156335828411" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1336250815">
+    <transform xil_pn:end_ts="1336603169" xil_pn:in_ck="8052531156335828411" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1336603169">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="INTERCON_P2P.vhd"/>
       <outfile xil_pn:name="SERIALMASTER.vhd"/>
       <outfile xil_pn:name="SYC0001a.vhd"/>
@@ -228,11 +225,11 @@
       <outfile xil_pn:name="uart_control.vhd"/>
       <outfile xil_pn:name="uart_wishbone_slave.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1336250968" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5308805702929486166" xil_pn:start_ts="1336250968">
+    <transform xil_pn:end_ts="1336603169" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8542187049970039926" xil_pn:start_ts="1336603169">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1336250968" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1238851900205137108" xil_pn:start_ts="1336250968">
+    <transform xil_pn:end_ts="1336603169" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8521261985131728908" xil_pn:start_ts="1336603169">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -240,14 +237,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1336250815" xil_pn:in_ck="8052531156335828411" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1336250815">
+    <transform xil_pn:end_ts="1336603169" xil_pn:in_ck="8052531156335828411" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1336603169">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="INTERCON_P2P.vhd"/>
       <outfile xil_pn:name="SERIALMASTER.vhd"/>
       <outfile xil_pn:name="SYC0001a.vhd"/>
@@ -267,29 +259,22 @@
       <outfile xil_pn:name="uart_control.vhd"/>
       <outfile xil_pn:name="uart_wishbone_slave.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1336250972" xil_pn:in_ck="8052531156335828411" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8691405173963172662" xil_pn:start_ts="1336250968">
+    <transform xil_pn:end_ts="1336603171" xil_pn:in_ck="8052531156335828411" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-728369216885656586" xil_pn:start_ts="1336603169">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testUart_wishbone_slave_beh.prj"/>
-      <outfile xil_pn:name="testUart_wishbone_slave_isim_beh.exe"/>
+      <outfile xil_pn:name="testSerial_receiver_beh.prj"/>
+      <outfile xil_pn:name="testSerial_receiver_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1336250972" xil_pn:in_ck="7043554240611338668" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="7109246390254422178" xil_pn:start_ts="1336250972">
+    <transform xil_pn:end_ts="1336603172" xil_pn:in_ck="7043554240611338668" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1766511671646254562" xil_pn:start_ts="1336603171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="testSerial_receiver_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1335914570" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1335914570">
       <status xil_pn:value="SuccessfullyRun"/>
