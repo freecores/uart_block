@@ -1,4 +1,7 @@
---! Test serial_transmitter module
+--! @file
+--! @brief Test serial_transmitter module
+
+--! Use standard library and import the packages (std_logic_1164,std_logic_unsigned,std_logic_arith)
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
@@ -8,6 +11,8 @@ use work.pkgDefinitions.all;
 ENTITY testSerial_transmitter IS
 END testSerial_transmitter;
  
+--! @brief Test serial_transmitter module
+--! @details Just send the date over the serial_out and analyse the results
 ARCHITECTURE behavior OF testSerial_transmitter IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
@@ -62,6 +67,19 @@ BEGIN
 		data_byte <= "01010101";
       wait for 50 ns;	
 		rst <= '0';
+		
+		-- Test serial data...
+		wait until rising_edge(baudClk); -- Start bit
+		wait for 1 ns;	
+		assert serial_out = '0' report "Invalid value  "  severity failure;
+		
+		for numBit in 0 to 7 loop
+			wait until rising_edge(baudClk);
+			wait for 1 ns;
+			-- The image attribute convert a typed value into a string
+			report "Testing bit:" & integer'image(numBit) & " value " & std_logic'image(serial_out);
+			assert serial_out = data_byte(numBit) report "Invalid value on bit:"  severity failure;
+		end loop;
 
       wait until data_sent = '1';
 		wait for baudClk_period*3;
@@ -71,6 +89,20 @@ BEGIN
 		data_byte <= "11000100";
       wait for 50 ns;	
 		rst <= '0';
+		
+		-- Test serial data...
+		wait until rising_edge(baudClk); -- Start bit
+		wait for 1 ns;	
+		assert serial_out = '0' report "Invalid value  "  severity failure;
+		
+		for numBit in 0 to (data_byte'LENGTH-1) loop
+			-- Wait for the clock rising edge
+			wait until rising_edge(baudClk);
+			wait for 1 ns;
+			report "Testing bit:" & integer'image(numBit) & " value " & std_logic'image(serial_out);
+			assert serial_out = data_byte(numBit) report "Invalid value on bit:"  severity failure;
+		end loop;
+				
 
       wait until data_sent = '1';
 		wait for baudClk_period*3;

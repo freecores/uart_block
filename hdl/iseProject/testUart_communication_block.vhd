@@ -1,4 +1,7 @@
---! Test baud_generator module
+--! @file
+--! @brief Test communication block
+
+--! Use standard library and import the packages (std_logic_1164,std_logic_unsigned,std_logic_arith)
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 use ieee.std_logic_unsigned.all;
@@ -10,6 +13,8 @@ use work.pkgDefinitions.all;
 ENTITY testUart_communication_block IS
 END testUart_communication_block;
  
+--! @brief Test communication block
+--! @details This will include all blocks used in uart (transmiter, receiver, baud generator)
 ARCHITECTURE behavior OF testUart_communication_block IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
